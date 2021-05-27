@@ -1,22 +1,32 @@
 import React from "react";
 import Header from "./Header";
 import Content from "./Content";
-import Welcome from "./Welcome";
+import Descript from "./Descript";
 
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <Header />
-        <Welcome />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            // height: "100vh",
-          }}>
-          <Content />
+      <div className="App">
+        <div>
+          <Header />
+        </div>
+        <div>
+          <Descript />
+          <div class="Contentdiv">
+            <Content />
+          </div>
+        </div>
+        <div>
+          <Descript />
+          <div class="Contentdiv">
+            <Content />
+          </div>
+        </div>
+        <div>
+          <Descript />
+          <div class="Contentdiv">
+            <Content />
+          </div>
         </div>
       </div>
     );

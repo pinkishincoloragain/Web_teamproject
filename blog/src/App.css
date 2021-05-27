@@ -9,6 +9,7 @@
 }
 
 .Header {
+  margin-top: 5vh;
   background-color: #282c34;
   min-height: 10vh;
   max-height: 30vh;
@@ -20,12 +21,25 @@
   color: white;
 }
 
+.imgholder {
+  margin-top: 20vh;
+  margin-bottom: 5vw;
+  height: 10px+30vh;
+  max-height: 50vh;
+}
+
 .Logo1 {
   width: 15vw;
   animation: fadein 2s;
   animation-delay: 3s;
   animation-fill-mode: forwards;
   visibility: hidden;
+  transition: 1s;
+}
+
+.Logo1:hover {
+  transform: rotate(360deg) translateY(-1vw);
+  transition: 1s;
 }
 
 .xImg {
@@ -35,9 +49,15 @@
   animation-delay: 4s;
   animation-fill-mode: forwards;
   visibility: hidden;
-  margin-right: 10vh;
-  margin-left: 10vh;
-  padding-bottom: 2vh;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  margin-bottom: 0vh;
+  transition: 1s;
+}
+
+.xImg:hover {
+  transform: rotate(360deg);
+  transition: 1s;
 }
 
 .Logo2 {
@@ -46,6 +66,23 @@
   animation-delay: 5s;
   animation-fill-mode: forwards;
   visibility: hidden;
+  transition: 1s;
+}
+
+.Logo2:hover {
+  transform: rotate(360deg) translateY(-1vw);
+  transition: 1s;
+}
+
+.Bar {
+  height: 1vw;
+  width: 62vw;
+  margin-left: 18.5vw;
+  align-items: center;
+  flex-direction: column;
+  border-width: 50vw;
+  border-color: midnightblue;
+  margin-bottom: 40vh;
 }
 
 @keyframes fadein {
@@ -97,6 +134,8 @@ p.typing::after {
 
 .Descript {
   /* font-style: italic; */
+  text-decoration: underline;
+  margin-bottom: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -118,10 +157,11 @@ p.typing::after {
 
 .ContentBox {
   width: 80vw;
-  height: 75vh;
+  height: 70vh;
   margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 20vh;
+
   align-items: center;
   justify-content: center;
   border: solid 1vh #282c34;

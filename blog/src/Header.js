@@ -10,11 +10,13 @@ class Header extends React.Component {
     return (
       <div>
         <h1 className="Header">
-          <p class="typing">지금. 당신이. 서 있는 곳.</p>
+          <p className="typing">지금. 당신이. 서 있는 곳.</p>
         </h1>
-        <img className="Logo1" src={w3w} alt="w3w"></img>
-        <img className="xImg" src={x} alt="x"></img>
-        <img className="Logo2" src={kakao} alt="kakao"></img>
+        <div className="imgholder">
+          <img className="Logo1" src={w3w} alt="w3w"></img>
+          <img className="xImg" src={x} alt="x"></img>
+          <img className="Logo2" src={kakao} alt="kakao"></img>
+        </div>
       </div>
     );
   }

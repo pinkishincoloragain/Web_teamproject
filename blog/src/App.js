@@ -11,21 +11,27 @@ class App extends React.Component {
           <Header />
         </div>
         <div>
-          <Descript />
+          <Descript name="Let's get it started" color="red" />
           <div class="Contentdiv">
-            <Content />
+            <Content color="yellow" />
           </div>
         </div>
         <div>
-          <Descript />
+          <Descript name="Your place" />
           <div class="Contentdiv">
-            <Content />
+            <Content color="#543E47" />
           </div>
         </div>
         <div>
-          <Descript />
+          <Descript name="Your news" />
           <div class="Contentdiv">
-            <Content />
+            <Content color="#2DB400" />
+          </div>
+        </div>
+        <div>
+          <Descript name="Your youtube videos" />
+          <div class="Contentdiv">
+            <Content color="#C4302B" />
           </div>
         </div>
       </div>

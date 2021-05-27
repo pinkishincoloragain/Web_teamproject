@@ -12,9 +12,9 @@ class Header extends React.Component {
         <h1 className="Header">
           <p class="typing">지금. 당신이. 서 있는 곳.</p>
         </h1>
-        <img className="LogoImg" src={w3w} alt="w3w"></img>
+        <img className="Logo1" src={w3w} alt="w3w"></img>
         <img className="xImg" src={x} alt="x"></img>
-        <img className="LogoImg" src={kakao} alt="kakao"></img>
+        <img className="Logo2" src={kakao} alt="kakao"></img>
       </div>
     );
   }

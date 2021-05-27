@@ -20,17 +20,43 @@
   color: white;
 }
 
-.LogoImg {
-  min-height: 10vh;
-  max-height: 30vh;
+.Logo1 {
+  width: 15vw;
+  animation: fadein 2s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
 }
 
 .xImg {
+  width: 10vw;
+  height: 10vw;
+  animation: fadein 2s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
   margin-right: 10vh;
   margin-left: 10vh;
-  padding-bottom: 5vh;
-  min-height: 10vh;
-  max-height: 20vh;
+  padding-bottom: 2vh;
+}
+
+.Logo2 {
+  width: 15vw;
+  animation: fadein 2s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+
+@keyframes fadein {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 p.typing {
@@ -70,21 +96,13 @@ p.typing::after {
 }
 
 .Descript {
-  font-style: italic;
+  /* font-style: italic; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 5vw;
   animation: fadein 3s;
-}
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .App-link {
@@ -104,7 +122,8 @@ p.typing::after {
   margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 20vh;
-  justify-content: "center";
+  align-items: center;
+  justify-content: center;
   border: solid 1vh #282c34;
   background-color: midnightblue;
   text-align: center;

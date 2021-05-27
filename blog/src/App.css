@@ -11,22 +11,71 @@
 .Header {
   background-color: #282c34;
   min-height: 10vh;
+  max-height: 30vh;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 12vw;
   color: white;
 }
 
-.Welcome {
-  font-style: italic;
+.LogoImg {
   min-height: 10vh;
+  max-height: 30vh;
+}
+
+.xImg {
+  margin-right: 10vh;
+  margin-left: 10vh;
+  padding-bottom: 5vh;
+  min-height: 10vh;
+  max-height: 20vh;
+}
+
+p.typing {
+  /* position: relative; */
+  /* display: inline-block; */
+  height: calc(12vw);
+  font-size: calc(10vw);
+  overflow: hidden;
+  animation: typingAni 3s steps(100, end);
+}
+p.typing::after {
+  position: absolute;
+  display: block;
+  content: "";
+  right: 0;
+  animation: cursor 1s step-end infinite;
+}
+
+@keyframes typingAni {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.Descript {
+  font-style: italic;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 10vh;
+  font-size: 5vw;
   animation: fadein 3s;
 }
 @keyframes fadein {
@@ -67,41 +116,5 @@
   }
   to {
     transform: rotate(360deg);
-  }
-}
-
-p.typing {
-  /* position: relative; */
-  /* display: inline-block; */
-  height: calc(12vh + 2vmin);
-  font-size: calc(10vh + 2vmin);
-  overflow: hidden;
-  animation: typingAni 3s steps(100, end) 1;
-}
-p.typing::after {
-  position: absolute;
-  display: block;
-  content: "";
-  right: 0;
-  animation: cursor 1s step-end infinite;
-}
-
-@keyframes typingAni {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@keyframes cursor {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }

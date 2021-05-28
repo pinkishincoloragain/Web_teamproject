@@ -3,6 +3,7 @@ import Header from "./Header";
 import Content from "./Content";
 import Descript from "./Descript";
 import Bar from "./SeperateBar";
+import Map from "./Map";
 
 class App extends React.Component {
   render() {
@@ -15,7 +16,8 @@ class App extends React.Component {
         <div>
           <Descript name="Let's get it started" color="#F7E600" />
           <div className="Contentdiv">
-            <Content color="#F7E600" />
+            {/* <Content color="#F7E600" /> */}
+            <Map />
           </div>
         </div>
         <div>

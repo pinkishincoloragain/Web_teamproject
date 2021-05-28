@@ -165,7 +165,7 @@ p.typing::after {
   align-items: center;
   justify-content: center;
   border: solid 1vh #282c34;
-  background-color: midnightblue;
+  /* background-color: midnightblue; */
   text-align: center;
 }
 

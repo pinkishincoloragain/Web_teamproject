@@ -3,7 +3,8 @@ var req = new XMLHttpRequest();
 function getID(word){
 
     var data;
-    var res;
+    var temp;
+    var VideoId;
 
     // 영상 검색에 필요한 변수
     var optionParams={
@@ -26,10 +27,10 @@ function getID(word){
     req.onload = () => {
         data = JSON.parse(req.response);
         var idx = String(Object.keys(data)[5])
-        var res = data[idx]
-        res = res[0].id.videoId;
+        var temp = data[idx]
+        VideoId = temp[0].id.videoId;
     };
     req.send();
 
-    return res;
+    return VideoId;
 }

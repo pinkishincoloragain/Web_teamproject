@@ -1,14 +1,7 @@
 import React from "react";
 import "./App.css";
 
-const btnStyle = {
-  display: "inline-block",
-  border: "5vw solid black",
-  padding: "3vw",
-  cursor: "pointer",
-};
-
-class SkipButton extends React.Component {
+class NextButton extends React.Component {
   state = {
     select: false,
   };
@@ -21,9 +14,7 @@ class SkipButton extends React.Component {
   render() {
     return (
       <>
-        <div onClick={this.handleClick} style={btnStyle}>
-          &gt;&gt;
-        </div>
+        <div onClick={this.handleClick} style={btnStyle}></div>
       </>
     );
   }

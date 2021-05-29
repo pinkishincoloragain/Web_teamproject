@@ -4,7 +4,7 @@ import Content from "./Content";
 import Descript from "./Descript";
 import Bar from "./SeperateBar";
 import Map from "./Map";
-import Map_component from "./Map";
+import Map_component from "./Map_component";
 
 class App extends React.Component {
   render() {

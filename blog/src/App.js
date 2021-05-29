@@ -3,10 +3,20 @@ import Header from "./Header";
 import Content from "./Content";
 import Descript from "./Descript";
 import Bar from "./SeperateBar";
-import Map from "./Map";
-import Map_component from "./Map_component";
+import MapComponent from "./MapComponent";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      address: null,
+    };
+  }
+
+  setParentValue = (v) => {
+    this.setState({ address: v });
+  };
+
   render() {
     return (
       <div className="App">
@@ -18,13 +28,14 @@ class App extends React.Component {
           <Descript name="Let's get it started" color="#F7E600" />
           <div className="Contentdiv">
             {/* <Content color="#F7E600" /> */}
-            <Map_component />
+            <MapComponent setParentValue={this.setParentValue} />
+            <p>{this.state.address}</p>
           </div>
         </div>
         <div>
           <Descript name="Your Place" color="#543E47" />
           <div className="Contentdiv">
-            <Content color="#543E47" />
+            <Content color="#543E47" address={this.state.address} />
           </div>
         </div>
         <div>

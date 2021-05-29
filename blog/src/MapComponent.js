@@ -1,4 +1,3 @@
-import { Alert } from "bootstrap";
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Loading from "./Loading";
@@ -6,8 +5,12 @@ import Loading from "./Loading";
 const { kakao } = window;
 const { what3words } = window;
 
-function Map_component() {
+function MapComponent() {
   const [address, setAddress] = useState(0);
+
+  const childFunction = () => {
+    this.props.setParentValue(address);
+  };
 
   useEffect(() => {
     const container = document.getElementById("myMap");
@@ -51,14 +54,11 @@ function Map_component() {
       <h2 id="words">
         <br></br>
       </h2>
-      <button id="changeButton" onClick={() => alert(address)}>
-        변환하기 !! <b>{address}</b>
-      </button>
-      <button id="bt2" onClick={() => alert}>
-        변환하기!!! !
+      <button id="changeButton" onClick={() => childFunction}>
+        변환하기 !
       </button>
     </div>
   );
 }
 
-export default Map_component;
+export default MapComponent;

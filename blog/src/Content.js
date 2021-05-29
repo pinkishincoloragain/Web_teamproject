@@ -5,13 +5,14 @@ import Loading from "./Loading";
 class Content extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { tag: "fish" };
+    this.state = { address: null };
   }
   render() {
     return (
       <div className="ContentBox" style={{ backgroundColor: this.props.color }}>
         <h2>Content</h2>
         <p> Hey! </p>
+        <p>{this.props.address}</p>
         <Loading />
       </div>
     );
@@ -20,6 +21,7 @@ class Content extends React.Component {
 
 Content.defaultProps = {
   color: "midnightblue",
+  address: "",
 };
 
 export default Content;

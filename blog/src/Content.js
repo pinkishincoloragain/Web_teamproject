@@ -9,7 +9,7 @@ function Content(props) {
     <div className="ContentBox" style={{ backgroundColor: props.color }}>
       <h2>Content</h2>
       <p> Hey! </p>
-      <p>{address}</p>
+      <p>{props.address}</p>
       <Loading />
     </div>
   );
@@ -17,7 +17,6 @@ function Content(props) {
 
 Content.defaultProps = {
   color: "midnightblue",
-  address: "",
 };
 
 export default Content;

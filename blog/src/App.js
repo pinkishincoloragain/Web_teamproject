@@ -3,6 +3,11 @@ import Header from "./Header";
 import Content from "./Content";
 import Descript from "./Descript";
 import Bar from "./SeperateBar";
+import Map from "./Map";
+import jQuery from "jquery";
+import MapComponent from "./MapComponent";
+
+window.$ = window.jQuery = jQuery;
 
 function App() {
   const [address, setAddress] = useState("/// 당신의 위치를 고르세요!");

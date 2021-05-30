@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Loading from "./Loading";
+// import Loading from "./Loading";
 
 const { kakao } = window;
 const { what3words } = window;
 
-function MapComponent() {
+function MapComponent(props) {
   const [address, setAddress] = useState(0);
 
-  const childFunction = () => {
-    this.props.setParentValue(address);
-  };
+  // const childFunction = (props) => {
+  //   this.props.setParentValue(address);
+  // };
 
   useEffect(() => {
     const container = document.getElementById("myMap");
@@ -54,7 +54,7 @@ function MapComponent() {
       <h2 id="words">
         <br></br>
       </h2>
-      <button id="changeButton" onClick={() => childFunction}>
+      <button id="changeButton" onClick={() => props.setParent(address)}>
         변환하기 !
       </button>
     </div>

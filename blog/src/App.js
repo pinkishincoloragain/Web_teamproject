@@ -3,7 +3,6 @@ import Header from "./Header";
 import Content from "./Content";
 import Descript from "./Descript";
 import Bar from "./SeperateBar";
-import MapComponent from "./MapComponent";
 
 function App() {
   const [address, setAddress] = useState("/// 당신의 위치를 고르세요!");

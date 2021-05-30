@@ -4,6 +4,8 @@ import Content from "./Content";
 import Descript from "./Descript";
 import Bar from "./SeperateBar";
 import Map from "./Map";
+import jQuery from "jquery";
+window.$ = window.jQuery = jQuery;
 
 class App extends React.Component {
   render() {

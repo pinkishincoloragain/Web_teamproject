@@ -65,9 +65,7 @@ nav ul li a span {
 
 nav li {
   display: block;
-  width: 10px;
-  height: 10px;
-  margin: 16px;
+  width: 10vw;
   position: relative;
 }
 
@@ -76,10 +74,6 @@ nav span:after {
   position: absolute;
   content: "";
   display: block;
-  top: 4px;
-  left: 4px;
-  right: 4px;
-  bottom: 4px;
   border-radius: 100%;
   transition: 0.3s;
 }
@@ -89,12 +83,12 @@ nav li .active span {
   position: absolute;
 }
 
-nav li .active span:after {
+/* nav li .active span:after {
   top: -6px;
   left: -6px;
   bottom: -6px;
   right: -6px;
-}
+} */
 
 nav ul {
   margin: 0;
@@ -103,8 +97,7 @@ nav ul {
 
 nav ul li {
   display: block;
-  width: 14px;
-  height: 13px;
+  height: 3vh;
   margin: 7px;
   position: relative;
 }
@@ -139,12 +132,6 @@ nav ul li a span {
   top: 50%;
   margin: -2px 0 0 -2px;
   transition: all 0.1s ease-in-out;
-}
-
-nav ul li:hover a span {
-  width: 10px;
-  height: 10px;
-  margin: -5px 0px 0px -5px;
 }
 
 .pg-horizontal nav {

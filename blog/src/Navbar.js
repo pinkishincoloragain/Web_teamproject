@@ -20,7 +20,7 @@ export default class Navbar extends Component {
                 offset={-70}
                 duration={500}
               >
-                Section 1
+                Home
               </Link>
             </li>
             <li className="nav-item">
@@ -32,7 +32,7 @@ export default class Navbar extends Component {
                 offset={-70}
                 duration={500}
               >
-                Section 2
+                Let's get it started
               </Link>
             </li>
             <li className="nav-item">
@@ -44,7 +44,7 @@ export default class Navbar extends Component {
                 offset={-70}
                 duration={500}
               >
-                Section 3
+                Your Place
               </Link>
             </li>
             <li className="nav-item">
@@ -56,7 +56,7 @@ export default class Navbar extends Component {
                 offset={-70}
                 duration={500}
               >
-                Section 4
+                Your News
               </Link>
             </li>
             <li className="nav-item">
@@ -68,7 +68,19 @@ export default class Navbar extends Component {
                 offset={-70}
                 duration={500}
               >
-                Section 5
+                Your Youtube Videos
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                to="section6"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Make Comments!
               </Link>
             </li>
           </ul>

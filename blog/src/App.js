@@ -27,7 +27,7 @@ function App() {
       <Header />
       <Bar />
       <div className="page">
-        <Section id="section1" />
+        <Section id="section2" />
         <Descript name="Let's get it started" color="#F7E600" />
         <div className="Contentdiv">
           {/* <Content color="#F7E600" /> */}
@@ -35,28 +35,28 @@ function App() {
         </div>
       </div>
       <div className="page">
-        <Section id="section2" />
+        <Section id="section3" />
         <Descript name="Your Place" color="#543E47" />
         <div className="Contentdiv">
           <Content color="#543E47" address={address} />
         </div>
       </div>
       <div className="page">
-        <Section id="section3" />
+        <Section id="section4" />
         <Descript name="Your News" color="#2DB400" />
         <div className="Contentdiv">
           <Content color="#2DB400" address={address} />
         </div>
       </div>
       <div className="page">
-        <Section id="section4" />
+        <Section id="section5" />
         <Descript name="Your Youtube videos" color="#C4302B" />
         <div className="Contentdiv">
           <Content color="#C4302B" address={address} />
         </div>
       </div>
       <div className="page">
-        <Section id="section5" />
+        <Section id="section6" />
         <Descript name="Make comment on this place!" color="#E2DFD8" />
         <div className="Contentdiv">
           <Content color="#E2DFD8" address={address} />

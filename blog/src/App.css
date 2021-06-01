@@ -23,127 +23,38 @@
 
 .imgholder {
   margin-top: 20vh;
-  margin-bottom: 5vw;
+  margin-bottom: 1vw;
   height: 10px+30vh;
   max-height: 50vh;
+}
+
+.textholder {
+  display: flex;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 5vw;
+  height: 10px+30vh;
+  max-height: 10vh;
+}
+
+.imgtext {
+  font-size: 10vh;
+  width: 15vw;
+  margin-left: 10vw;
+  margin-right: 18vw;
+  height: 5vh;
+  text-align: bottom;
 }
 
 .Logo1 {
   width: 15vw;
   animation: fadein 2s;
+  transform: rotate(360deg) 4s;
   animation-delay: 3s;
   animation-fill-mode: forwards;
   visibility: hidden;
   transition: 1s;
 }
-
-/* !!!!!!!!! fullpage css*/
-
-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row;
-  color: #fff;
-  position: relative;
-}
-
-nav {
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-nav ul li a span {
-  background: #fff;
-}
-
-nav li {
-  display: block;
-  width: 10vw;
-  position: relative;
-}
-
-nav span:after {
-  background: rgba(255, 255, 255, 0.15);
-  position: absolute;
-  content: "";
-  display: block;
-  border-radius: 100%;
-  transition: 0.3s;
-}
-
-nav li .active span {
-  background: #fff;
-  position: absolute;
-}
-
-/* nav li .active span:after {
-  top: -6px;
-  left: -6px;
-  bottom: -6px;
-  right: -6px;
-} */
-
-nav ul {
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  display: block;
-  height: 3vh;
-  margin: 7px;
-  position: relative;
-}
-
-nav ul li a {
-  display: block;
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-nav ul li a.active span,
-nav ul li:hover a.active span {
-  height: 12px;
-  width: 12px;
-  margin: -6px 0 0 -6px;
-  border-radius: 100%;
-}
-
-nav ul li a span {
-  border-radius: 50%;
-  position: absolute;
-  z-index: 1;
-  height: 4px;
-  width: 4px;
-  border: 0;
-  background: #fff;
-  left: 50%;
-  top: 50%;
-  margin: -2px 0 0 -2px;
-  transition: all 0.1s ease-in-out;
-}
-
-.pg-horizontal nav {
-  width: 100vw;
-  left: 0;
-  bottom: 20px;
-}
-.pg-horizontal nav ul li {
-  float: left;
-}
-
-/* !!!!!!! */
 
 .Logo1:hover {
   transform: rotate(360deg) translateY(-1vw);
@@ -194,6 +105,94 @@ nav ul li a span {
   margin-bottom: 40vh;
 }
 
+/* !!!!!!!!! fullpage css*/
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row;
+  color: #fff;
+  position: relative;
+}
+
+nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li a span {
+  background: #fff;
+}
+
+nav li {
+  display: block;
+  width: 10vw;
+  position: relative;
+}
+
+nav span:after {
+  background: rgba(255, 255, 255, 0.15);
+  position: absolute;
+  content: "";
+  display: block;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+
+nav li .active span {
+  background: #fff;
+  position: absolute;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: block;
+  height: 3vh;
+  margin: 7px;
+  position: relative;
+  text-align: right;
+}
+
+nav ul li a {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+nav ul li a.active span,
+nav ul li:hover a.active span {
+  height: 12px;
+  width: 12px;
+  margin: -6px 0 0 -6px;
+  border-radius: 100%;
+}
+
+.pg-horizontal nav {
+  width: 100vw;
+  left: 0;
+  bottom: 20px;
+}
+.pg-horizontal nav ul li {
+  float: left;
+}
+
+/* !!!!!!! */
+
 .nav {
   background-color: var(--off-white);
   position: sticky;
@@ -201,9 +200,8 @@ nav ul li a span {
   height: 10vh;
   width: 20vw;
   z-index: 1000;
-  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
-  margin-left: 10vw;
-  margin-left: 80vw;
+  margin-left: 85vw;
+  margin-right: 0vw;
 }
 
 .nav-item:hover {

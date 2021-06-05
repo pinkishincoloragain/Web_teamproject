@@ -4,7 +4,6 @@ import Content from "./Content";
 import Descript from "./Descript";
 import Bar from "./SeperateBar";
 import Memo from "./Memo";
-import Map from "./Map";
 import jQuery from "jquery";
 import MapComponent from "./MapComponent";
 import Section from "./Section";

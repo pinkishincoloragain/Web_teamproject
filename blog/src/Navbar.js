@@ -18,8 +18,7 @@ export default class Navbar extends Component {
                 spy={true}
                 smooth={true}
                 offset={-70}
-                duration={500}
-              >
+                duration={500}>
                 Home
               </Link>
             </li>
@@ -30,8 +29,7 @@ export default class Navbar extends Component {
                 spy={true}
                 smooth={true}
                 offset={-70}
-                duration={500}
-              >
+                duration={500}>
                 Let's get it started
               </Link>
             </li>
@@ -42,8 +40,7 @@ export default class Navbar extends Component {
                 spy={true}
                 smooth={true}
                 offset={-70}
-                duration={500}
-              >
+                duration={500}>
                 Your Place
               </Link>
             </li>
@@ -54,8 +51,7 @@ export default class Navbar extends Component {
                 spy={true}
                 smooth={true}
                 offset={-70}
-                duration={500}
-              >
+                duration={500}>
                 Your News
               </Link>
             </li>
@@ -66,8 +62,7 @@ export default class Navbar extends Component {
                 spy={true}
                 smooth={true}
                 offset={-70}
-                duration={500}
-              >
+                duration={500}>
                 Your Youtube Videos
               </Link>
             </li>
@@ -78,8 +73,7 @@ export default class Navbar extends Component {
                 spy={true}
                 smooth={true}
                 offset={-70}
-                duration={500}
-              >
+                duration={500}>
                 Make Comments!
               </Link>
             </li>

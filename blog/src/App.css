@@ -115,6 +115,10 @@ section {
   color: #fff;
   position: relative;
 }
+/* 
+.sectionHeader {
+  height: 10vh;
+} */
 
 nav ul li a span {
   background: #fff;
@@ -188,9 +192,22 @@ nav ul li:hover a.active span {
   margin-right: 2vw;
 }
 
-.nav-item:hover {
-  color: black;
+.nav-item {
+  height: 10vh;
+  font-size: 100%;
   cursor: pointer;
+  transition: font-size 0.2s ease;
+}
+
+.nav-item:hover {
+  color: red;
+  transition: font-size 0.2s ease;
+  font-size: 120%;
+  cursor: pointer;
+}
+
+.nav-items {
+  font-size: 100%;
 }
 
 .nav .nav-content {
@@ -253,7 +270,7 @@ p.typing::after {
 .Descript {
   /* font-style: italic; */
   text-decoration: underline;
-  margin-bottom: 10vh;
+  margin-bottom: 6vh;
   display: flex;
   flex-direction: column;
   align-items: center;

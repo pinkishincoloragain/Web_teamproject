@@ -17,10 +17,10 @@ class Header extends React.Component {
           <img className="xImg" src={x} alt="x"></img>
           <img className="Logo2" src={kakao} alt="kakao" />
           <div>
-            <div className="textholder">
-              <div className="imgtext">W3W</div>
-              <div className="imgtext">KaKaoMap</div>
-            </div>
+            {/* <div className="textholder">
+              <span className="imgtext">W3W</span>
+              <span className="imgtext">KaKaoMap</span>
+            </div> */}
           </div>
         </div>
       </div>

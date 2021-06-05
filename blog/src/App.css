@@ -30,20 +30,20 @@
 
 .textholder {
   display: flex;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  margin-left: 12vw;
+  margin-right: 12vw;
   margin-bottom: 5vw;
   height: 10px+30vh;
   max-height: 10vh;
 }
 
 .imgtext {
-  font-size: 10vh;
-  width: 15vw;
-  margin-left: 10vw;
-  margin-right: 18vw;
+  font-size: 5vw;
+  width: 10vw;
+  text-align: center;
+  margin-left: 15vw;
+  margin-right: 15vw;
   height: 5vh;
-  text-align: bottom;
 }
 
 .Logo1 {
@@ -116,17 +116,6 @@ section {
   position: relative;
 }
 
-nav {
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 nav ul li a span {
   background: #fff;
 }
@@ -146,11 +135,6 @@ nav span:after {
   transition: 0.3s;
 }
 
-nav li .active span {
-  background: #fff;
-  position: absolute;
-}
-
 nav ul {
   margin: 0;
   padding: 0;
@@ -159,7 +143,7 @@ nav ul {
 nav ul li {
   display: block;
   height: 3vh;
-  margin: 7px;
+  margin-top: 1vh;
   position: relative;
   text-align: right;
 }
@@ -174,13 +158,13 @@ nav ul li a {
   text-decoration: none;
 }
 
-nav ul li a.active span,
+/* nav ul li a.active span,
 nav ul li:hover a.active span {
   height: 12px;
   width: 12px;
   margin: -6px 0 0 -6px;
   border-radius: 100%;
-}
+} */
 
 .pg-horizontal nav {
   width: 100vw;
@@ -198,10 +182,10 @@ nav ul li:hover a.active span {
   position: sticky;
   bottom: 10vh;
   height: 10vh;
-  width: 20vw;
+  width: 8vw;
   z-index: 1000;
   margin-left: 85vw;
-  margin-right: 0vw;
+  margin-right: 2vw;
 }
 
 .nav-item:hover {
@@ -211,7 +195,7 @@ nav ul li:hover a.active span {
 
 .nav .nav-content {
   max-width: 900px;
-  padding: 0rem 3rem;
+  /* padding: 0rem 3rem; */
   margin: 0 auto;
   display: flex;
   justify-content: space-between;

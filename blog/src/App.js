@@ -59,7 +59,7 @@ function App() {
         <Section id="section6" />
         <Descript name="Make comment on this place!" color="#E2DFD8" />
         <div className="Contentdiv">
-          <Content color="#E2DFD8" address={address} />
+          <Memo color="#E2DFD8" address={address} />
         </div>
       </div>
       <Navbar />

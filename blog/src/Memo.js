@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Loading from "./Loading";
-import refreshComments from "./refreshComments";
+import RefreshComments from "./RefreshComments";
 
 const Memo = (props) => {
   // const [address, setAddress] = useState("///당신의 위치를 고르세요!");
@@ -23,7 +23,7 @@ const Memo = (props) => {
       <h2>Content</h2>
       <p> Hey! </p>
       <p>{props.address}</p>
-      <refreshComments />
+      <RefreshComments address={props.address} />
       {/* 입력받는 박스(버튼을 누르면 박스비우기 구현하지 못함) */}
       <iframe
         id={"iframe1"}

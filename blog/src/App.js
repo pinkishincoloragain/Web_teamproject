@@ -8,6 +8,7 @@ import jQuery from "jquery";
 import MapComponent from "./MapComponent";
 import Section from "./Section";
 import Navbar from "./Navbar";
+import ProgressBar from "react-scroll-progress-bar";
 
 window.$ = window.jQuery = jQuery;
 
@@ -24,6 +25,7 @@ function App() {
     <div className="App">
       <Section id="section1" />
       <Header />
+      <ProgressBar height="3" bgcolor="#F43059" duration="1" />
       <Bar />
       <div className="page">
         <Section id="section2" />

@@ -49,14 +49,16 @@ function MapComponent(props) {
   }, []);
 
   return (
-    <div className="ContentBox">
+    <div className="ContentBox-Map">
       <div id="myMap" style={{ width: "100%", height: "88%" }}></div>
       <h2 id="words">
         <br></br>
       </h2>
-      <button id="changeButton" onClick={() => props.setParent(address)}>
-        변환하기 !
-      </button>
+      <span>
+        <button id="changeButton" onClick={() => props.setParent(address)}>
+          Go to next stage !
+        </button>
+      </span>
     </div>
   );
 }

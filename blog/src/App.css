@@ -305,18 +305,43 @@ p.typing::after {
   /* height: "100vh"; */
 }
 
+#myMap {
+  z-index: 1;
+}
+
 .ContentBox {
   width: 80vw;
   height: 70vh;
   margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 20vh;
+  border-width: 4vh;
+  border-radius: 3vh 3vh 3vh 3vh;
 
   align-items: center;
   justify-content: center;
   border: solid 1vh #282c34;
   /* background-color: midnightblue; */
   text-align: center;
+}
+
+.ContentBox-Map {
+  width: 80vw;
+  height: 70vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 20vh;
+  border-width: 4vh;
+  border-radius: 0vh 0vh 3vh 3vh;
+
+  align-items: center;
+  justify-content: center;
+  border: solid 1vh #282c34;
+  /* background-color: midnightblue; */
+  text-align: center;
+}
+
+.changeButton {
 }
 
 @keyframes App-logo-spin {

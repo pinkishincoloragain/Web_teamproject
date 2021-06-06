@@ -29,7 +29,7 @@ export default class Navbar extends Component {
     return (
       <nav className="nav" id="navbar">
         <div className="nav-content">
-          Move to
+          Move
           <ul className="nav-items">
             <li className="nav-item" style={style1}>
               <Link

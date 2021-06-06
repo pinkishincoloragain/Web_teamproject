@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       <Section id="section1" />
       <Header />
-      <ProgressBar height="3" bgcolor="#F43059" duration="1" />
+      <ProgressBar height="2vh" bgcolor="#F43059" duration="1" />
       <Bar />
       <div className="page">
         <Section id="section2" />

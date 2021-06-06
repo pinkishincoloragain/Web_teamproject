@@ -7,6 +7,9 @@ import Map from "./Map";
 import jQuery from "jquery";
 import MapComponent from "./MapComponent";
 import Video from "./Video";
+import Section from "./Section";
+import Navbar from "./Navbar";
+import Memo from "./Memo";
 import { searchYouTube } from "./searchYouTube";
 import { fakeData } from "./fakeData";
 
@@ -15,6 +18,8 @@ const youTube = {
   max: 1,
   key: "AIzaSyCZjpHedAQbWYnAqnwMTNQ24jeY8fweuZY",
 };
+
+var fullWord;
 
 class App extends React.Component {
   constructor(props) {
@@ -35,6 +40,7 @@ class App extends React.Component {
   // 검색 버튼을 누르면 최종적으로 실행되는 함수
   // 새로운 검색어(newQuery)를 받아서 youTube 객체에 반영하고 goToSearch 메소드 실행
   handleSearch(newQuery) {
+    fullWord = newQuery;
     newQuery = newQuery.split(".");
     alert("change: " + newQuery[0]);
     // alert("change");
@@ -58,43 +64,48 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div>
-          <Header />
-          <Bar />
-        </div>
-        <div>
+        <Section id="section1" />
+        <Header />
+        <Bar />
+        <div className="page">
+          <Section id="section2" />
           <Descript name="Let's get it started" color="#F7E600" />
           <div className="Contentdiv">
-            <Content color="#F7E600" />
+            {/* <Content color="#F7E600" /> */}
             <MapComponent search={this.handleSearch} />
           </div>
         </div>
-        <div>
+        <div className="page">
+          <Section id="section3" />
           <Descript name="Your Place" color="#543E47" />
           <div className="Contentdiv">
             <Content color="#543E47" />
           </div>
         </div>
-        <div>
+        <div className="page">
+          <Section id="section4" />
           <Descript name="Your News" color="#2DB400" />
           <div className="Contentdiv">
             <Content color="#2DB400" />
           </div>
         </div>
-        <div>
+        <div className="page">
+          <Section id="section5" />
           <Descript name="Your Youtube videos" color="#C4302B" />
           <div className="Contentdiv">
             {/* <Content color="#C4302B" /> */}
             <Video video={this.state.current} />
-            <h1></h1>
           </div>
         </div>
-        <div>
+        <div className="page">
+          <Section id="section6" />
           <Descript name="Make comment on this place!" color="#E2DFD8" />
           <div className="Contentdiv">
-            <Content color="#E2DFD8" />
+            {/* <Content color="#E2DFD8" /> //memo 넣을 자리 */}
+            <Memo color="#E2DFD8" address={fullWord} />
           </div>
         </div>
+        <Navbar />
       </div>
     );
   }

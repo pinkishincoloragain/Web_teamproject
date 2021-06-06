@@ -12,6 +12,7 @@ import Navbar from "./Navbar";
 import Memo from "./Memo";
 import { searchYouTube } from "./searchYouTube";
 import { fakeData } from "./fakeData";
+import refreshComments from "./refreshComments";
 
 const youTube = {
   query: "",
@@ -86,7 +87,8 @@ class App extends React.Component {
           <Section id="section4" />
           <Descript name="Your News" color="#2DB400" />
           <div className="Contentdiv">
-            <Content color="#2DB400" />
+            {/* <Content color="#2DB400" /> */}
+            <refreshComments color="#2DB400" />
           </div>
         </div>
         <div className="page">

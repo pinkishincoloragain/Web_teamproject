@@ -3,6 +3,9 @@
   src: url("./font/DoHyeon-Regular.ttf") format("truetype");
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
 .App {
   text-align: center;
   font-family: DoHyeon-Regular;
@@ -184,26 +187,36 @@ nav ul li:hover a.active span {
 .nav {
   background-color: var(--off-white);
   position: sticky;
-  bottom: 10vh;
-  height: 10vh;
-  width: 8vw;
+  bottom: 75vh;
+  height: 8vh;
+  width: 5vw;
   z-index: 1000;
-  margin-left: 85vw;
-  margin-right: 2vw;
+  margin-left: 93vw;
+  /* margin-right: 2vw; */
 }
 
 .nav-item {
-  height: 10vh;
+  /* background-color: "blue"; */
+  width: 4vw;
+  text-align: center;
   font-size: 100%;
   cursor: pointer;
-  transition: font-size 0.2s ease;
+  height: 8vh;
+  border-radius: 2vw;
+  background-color: #282c34;
+  transition: height 0.2s ease;
+  font-size: 3vh;
+  color: ivory;
+  line-height: 8vh;
 }
 
 .nav-item:hover {
-  color: red;
-  transition: font-size 0.2s ease;
-  font-size: 120%;
+  transition: height 0.2s ease;
+  height: 12vh;
   cursor: pointer;
+  border-width: 0.5vh;
+  border-style: solid;
+  border-color: black;
 }
 
 .nav-items {
@@ -214,10 +227,12 @@ nav ul li:hover a.active span {
   max-width: 900px;
   /* padding: 0rem 3rem; */
   margin: 0 auto;
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  margin-bottom: 10vh;
+  font-size: larger;
 }
 
 @keyframes fadein {

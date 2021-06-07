@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="IU-211.7142.45">
+    <data-source name="MySQL" uuid="6afc018f-0b98-4d31-ab0a-4c69e134bdba">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>goweb@localhost</user-name>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>

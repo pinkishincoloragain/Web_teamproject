@@ -9,7 +9,7 @@ class Descript extends React.Component {
     // eslint-disable-next-line
     return (
       <h1 className="Descript" style={{ color: this.props.color }}>
-        /// {this.props.name}{" "}
+        &#47;&#47;&#47; {this.props.name}{" "}
       </h1>
     );
   }

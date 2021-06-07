@@ -1,12 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 // import Loading from "./Loading";
 
 const { kakao } = window;
 const { what3words } = window;
 
-function MapComponent(props) {
-  const [address, setAddress] = useState(0);
+let word_address = "";
+
+const MapComponent = (props) => {
+  // const [address, setAddress] = useState(0);
+
+  const sendWord = () => {
+    props.search(word_address);
+    // alert("word: " + word_address);
+  };
 
   // const childFunction = (props) => {
   //   this.props.setParentValue(address);
@@ -35,13 +42,12 @@ function MapComponent(props) {
 
       // 마커 위치를 클릭한 위치로 옮깁니다
       marker.setPosition(latlng);
-      var word_address;
 
       what3words.api
         .convertTo3wa({ lat: latlng.getLat(), lng: latlng.getLng() }, "ko")
         .then(function (response) {
           word_address = response.words;
-          setAddress(word_address);
+          // setAddress(word_address);
           var result = document.getElementById("words");
           result.innerHTML = "/// " + word_address;
         });
@@ -49,16 +55,16 @@ function MapComponent(props) {
   }, []);
 
   return (
-    <div className="ContentBox">
+    <div className="ContentBox-Map">
       <div id="myMap" style={{ width: "100%", height: "88%" }}></div>
       <h2 id="words">
         <br></br>
       </h2>
-      <button id="changeButton" onClick={() => props.setParent(address)}>
+      <button id="changeButton" onClick={sendWord}>
         변환하기 !
       </button>
     </div>
   );
-}
+};
 
 export default MapComponent;

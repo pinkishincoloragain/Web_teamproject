@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "./Header";
 import Content from "./Content";
 import Descript from "./Descript";
 import Bar from "./SeperateBar";
-import jQuery from "jquery";
 import MapComponent from "./MapComponent";
 import ProgressBar from "react-scroll-progress-bar";
 import Video from "./Video";
@@ -44,7 +43,7 @@ class App extends React.Component {
     newQuery = newQuery.split(".");
     alert("change: " + newQuery[0]);
     // alert("change");
-    youTube.query = newQuery;
+    youTube.query = newQuery[0];
     this.goToSearch();
   }
 

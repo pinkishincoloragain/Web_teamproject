@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 function RefreshComments(props) {
   // const [address, setAddress] = useState("///당신의 위치를 고르세요!");

@@ -7,6 +7,7 @@ const Video = (props) => {
   return (
     <div className="ContentBox">
       <iframe
+        title="video"
         style={{ width: "100%", height: "100%" }}
         src={videoURL + props.video.id.videoId}
         allowFullScreen

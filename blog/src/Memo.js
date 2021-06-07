@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import Loading from "./Loading";
 import RefreshComments from "./RefreshComments";
@@ -9,8 +9,8 @@ const Memo = (props) => {
   function deleteComment(wid, wpass) {
     let inputPass = prompt("비밀번호를 입력하세요");
 
-    if (inputPass == wpass) {
-      let response = fetch("/deleteComment.php?wid=" + wid);
+    if (inputPass === wpass) {
+      // let response = fetch("/deleteComment.php?wid=" + wid);
       alert("글이 삭제되었습니다!");
     } else {
       alert("비밀번호가 틀렸습니다!");
@@ -26,6 +26,7 @@ const Memo = (props) => {
       <RefreshComments address={props.address} />
       {/* 입력받는 박스(버튼을 누르면 박스비우기 구현하지 못함) */}
       <iframe
+        title="Memo"
         id={"iframe1"}
         name={"iframe1"}
         width={0}
@@ -83,9 +84,9 @@ const Memo = (props) => {
   );
 };
 
-{
-  /* 파라미터로 현재 댓글의 wid와 wpass 를 받고 사용자에게 password를 입력받아 비교후 같으면 삭제 아니면 틀렸다고 띄워주기 */
-}
+// {
+/* 파라미터로 현재 댓글의 wid와 wpass 를 받고 사용자에게 password를 입력받아 비교후 같으면 삭제 아니면 틀렸다고 띄워주기 */
+// }
 
 // Memo.defaultProps = {
 //   color: "midnightblue",

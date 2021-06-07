@@ -1,21 +1,10 @@
 import React from "react";
 import "./App.css";
 import Loading from "./Loading";
-import RefreshComments from "./RefreshComments";
+import { RefreshComments } from "./RefreshComments";
 
 const Memo = (props) => {
   // const [address, setAddress] = useState("///당신의 위치를 고르세요!");
-
-  function deleteComment(wid, wpass) {
-    let inputPass = prompt("비밀번호를 입력하세요");
-
-    if (inputPass === wpass) {
-      // let response = fetch("/deleteComment.php?wid=" + wid);
-      alert("글이 삭제되었습니다!");
-    } else {
-      alert("비밀번호가 틀렸습니다!");
-    }
-  }
 
   // 이게 기본값임.
   return (
@@ -23,7 +12,7 @@ const Memo = (props) => {
       <h2>Content</h2>
       <p> Hey! </p>
       <p>{props.address}</p>
-      <RefreshComments address={props.address} />
+
       {/* 입력받는 박스(버튼을 누르면 박스비우기 구현하지 못함) */}
       <iframe
         title="Memo"
@@ -73,23 +62,14 @@ const Memo = (props) => {
 
       {/* 지도의 '변환하기' 버튼을 클릭하면 작동 / 일단은 임의의 버튼으로 구현 */}
       <h2>방문글 목록</h2>
-
-      <table>{/* <refreshComments address={props.address} /> */}</table>
-
-      {/* 일단 임의의 wid와 wpass로 구현 */}
-      <button onClick={() => deleteComment(63, 1234)}>삭제</button>
-
+      <RefreshComments address={props.address} />
       <Loading />
     </div>
   );
 };
 
-// {
-/* 파라미터로 현재 댓글의 wid와 wpass 를 받고 사용자에게 password를 입력받아 비교후 같으면 삭제 아니면 틀렸다고 띄워주기 */
-// }
-
-// Memo.defaultProps = {
-//   color: "midnightblue",
-// };
+Memo.defaultProps = {
+  color: "midnightblue",
+};
 
 export default Memo;

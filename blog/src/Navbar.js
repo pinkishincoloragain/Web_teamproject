@@ -29,7 +29,7 @@ export default class Navbar extends Component {
     return (
       <nav className="nav" id="navbar">
         <div className="nav-content">
-          Move to
+          Move
           <ul className="nav-items">
             <li className="nav-item" style={style1}>
               <Link
@@ -38,8 +38,7 @@ export default class Navbar extends Component {
                 spy={true}
                 smooth={true}
                 offset={-70}
-                duration={100}
-              >
+                duration={100}>
                 {/* Home */}H
               </Link>
             </li>
@@ -50,8 +49,7 @@ export default class Navbar extends Component {
                 spy={true}
                 smooth={true}
                 offset={-70}
-                duration={100}
-              >
+                duration={100}>
                 {/* Map */}M
               </Link>
             </li>
@@ -62,8 +60,7 @@ export default class Navbar extends Component {
                 spy={true}
                 smooth={true}
                 offset={-70}
-                duration={100}
-              >
+                duration={100}>
                 {/* Place */}P
               </Link>
             </li>
@@ -74,8 +71,7 @@ export default class Navbar extends Component {
                 spy={true}
                 smooth={true}
                 offset={-70}
-                duration={100}
-              >
+                duration={100}>
                 {/* News */}N
               </Link>
             </li>
@@ -86,8 +82,7 @@ export default class Navbar extends Component {
                 spy={true}
                 smooth={true}
                 offset={-70}
-                duration={100}
-              >
+                duration={100}>
                 {/* Youtube */}Y
               </Link>
             </li>
@@ -98,8 +93,7 @@ export default class Navbar extends Component {
                 spy={true}
                 smooth={true}
                 offset={-70}
-                duration={100}
-              >
+                duration={100}>
                 {/* Comments */}C
               </Link>
             </li>

@@ -1,6 +1,13 @@
 import React from "react";
 import "./App.css";
 
+const btnStyle = {
+  display: "inline-block",
+  border: "5vw solid black",
+  padding: "3vw",
+  cursor: "pointer",
+};
+
 class NextButton extends React.Component {
   state = {
     select: false,
@@ -14,7 +21,10 @@ class NextButton extends React.Component {
   render() {
     return (
       <>
-        <div onClick={this.handleClick} style={btnStyle}></div>
+        <div onClick={this.handleClick} style={btnStyle}>
+          &gt;&gt;
+          <div></div>
+        </div>
       </>
     );
   }

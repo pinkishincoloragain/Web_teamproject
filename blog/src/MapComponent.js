@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 // import Loading from "./Loading";
 
@@ -55,7 +55,7 @@ const MapComponent = (props) => {
   }, []);
 
   return (
-    <div className="ContentBox">
+    <div className="ContentBox-Map">
       <div id="myMap" style={{ width: "100%", height: "88%" }}></div>
       <h2 id="words">
         <br></br>

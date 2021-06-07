@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import Loading from "./Loading";
-import {RefreshComments} from "./RefreshComments";
+import { RefreshComments } from "./RefreshComments";
 
 const Memo = (props) => {
   // const [address, setAddress] = useState("///당신의 위치를 고르세요!");
@@ -15,6 +15,7 @@ const Memo = (props) => {
 
       {/* 입력받는 박스(버튼을 누르면 박스비우기 구현하지 못함) */}
       <iframe
+        title="Memo"
         id={"iframe1"}
         name={"iframe1"}
         width={0}
@@ -61,7 +62,7 @@ const Memo = (props) => {
 
       {/* 지도의 '변환하기' 버튼을 클릭하면 작동 / 일단은 임의의 버튼으로 구현 */}
       <h2>방문글 목록</h2>
-        <RefreshComments address={props.address} />
+      <RefreshComments address={props.address} />
       <Loading />
     </div>
   );

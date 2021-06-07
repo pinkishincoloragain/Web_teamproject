@@ -17,7 +17,7 @@ import RefreshComments from "./RefreshComments";
 const youTube = {
   query: "",
   max: 1,
-  key: "AIzaSyCZjpHedAQbWYnAqnwMTNQ24jeY8fweuZY",
+  key: "AIzaSyAYtQoo4ySatdc2Ul7tM8h4h4W_VMXhFbM",
 };
 
 var fullWord;

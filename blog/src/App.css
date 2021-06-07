@@ -62,6 +62,7 @@ body::-webkit-scrollbar {
 .Logo1:hover {
   transform: rotate(360deg) translateY(-1vw);
   transition: 1s;
+  cursor: pointer;
 }
 
 .xImg {
@@ -94,6 +95,7 @@ body::-webkit-scrollbar {
 .Logo2:hover {
   transform: rotate(360deg) translateY(-1vw);
   transition: 1s;
+  cursor: pointer;
 }
 
 .Bar {

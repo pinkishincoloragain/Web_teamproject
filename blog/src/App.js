@@ -3,11 +3,8 @@ import Header from "./Header";
 import Content from "./Content";
 import Descript from "./Descript";
 import Bar from "./SeperateBar";
-import Memo from "./Memo";
 import jQuery from "jquery";
 import MapComponent from "./MapComponent";
-import Section from "./Section";
-import Navbar from "./Navbar";
 import ProgressBar from "react-scroll-progress-bar";
 import Video from "./Video";
 import Section from "./Section";
@@ -15,12 +12,11 @@ import Navbar from "./Navbar";
 import Memo from "./Memo";
 import { searchYouTube } from "./searchYouTube";
 import { fakeData } from "./fakeData";
-import RefreshComments from "./RefreshComments";
 
 const youTube = {
   query: "",
   max: 1,
-  key: "AIzaSyCZjpHedAQbWYnAqnwMTNQ24jeY8fweuZY",
+  key: "AIzaSyAYtQoo4ySatdc2Ul7tM8h4h4W_VMXhFbM",
 };
 
 var fullWord;
@@ -70,10 +66,10 @@ class App extends React.Component {
       <div className="App">
         <Section id="section1" />
         <Header />
-              <ProgressBar height="2vh" bgcolor="#F43059" duration="1" />
+        <ProgressBar height="2vh" bgcolor="#F43059" duration="1" />
 
         <Bar />
-        
+
         <div className="page">
           <Section id="section2" />
           <Descript name="Let's get it started" color="#F7E600" />

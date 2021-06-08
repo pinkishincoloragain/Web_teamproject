@@ -1,7 +1,16 @@
 import React, {useState} from "react";
 import "./App.css"
 import axios from "axios";
-import {map} from "react-bootstrap/ElementChildren";
+
+function deleteComment(wid, wpass){
+    let inputPass = prompt("비밀번호를 입력하세요");
+    if (inputPass === wpass) {
+        let response = fetch("/deleteComment.php?wid=" + wid);
+        alert("글이 삭제되었습니다!");
+    } else {
+        alert("비밀번호가 틀렸습니다!");
+    }
+}
 
 class CommentsInfo extends React.Component{
     render() {
@@ -9,7 +18,8 @@ class CommentsInfo extends React.Component{
             <div>
                 <span>Name : {this.props.comments['wname']}</span><br/>
                 <span>Content : {this.props.comments['content']}</span><br/>
-                <span>Date : {this.props.comments['wdate']}</span>
+                <span>Date : {this.props.comments['wdate']}</span><br/>
+                <span><button onClick={()=>deleteComment(this.props.comments['wid'], this.props.comments['wpass'])}>ㅡ</button></span>
                 <hr/>
             </div>
         );
@@ -61,16 +71,6 @@ class Comments extends React.Component{
             comments: arr
         })
         //console.log(this.state.comments)
-    }
-
-    deleteComment = (wid, wpass) => {
-        let inputPass = prompt("비밀번호를 입력하세요");
-        if (inputPass === wpass) {
-            let response = fetch("/deleteComment.php?wid=" + wid);
-            alert("글이 삭제되었습니다!");
-        } else {
-            alert("비밀번호가 틀렸습니다!");
-        }
     }
 
     render() {

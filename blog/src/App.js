@@ -9,10 +9,9 @@ import MapComponent from "./MapComponent";
 import Video from "./Video";
 import Section from "./Section";
 import Navbar from "./Navbar";
-import Memo from "./Memo";
 import { searchYouTube } from "./searchYouTube";
 import { fakeData } from "./fakeData";
-import RefreshComments from "./RefreshComments";
+import Comments from "./Comments";
 
 const youTube = {
   query: "",
@@ -102,8 +101,7 @@ class App extends React.Component {
           <Section id="section6" />
           <Descript name="Make comment on this place!" color="#E2DFD8" />
           <div className="Contentdiv">
-            {/* <Content color="#E2DFD8" /> //memo 넣을 자리 */}
-            <Memo color="#E2DFD8" address={fullWord} />
+            <Comments color="#E2DFD8" address={fullWord}/>
           </div>
         </div>
         <Navbar />

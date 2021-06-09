@@ -95,11 +95,11 @@ const Memo = (props) => {
           <tr>
             <td>Name</td>
             <td>
-              <input type={"text"} name={"wname"} />
+              <input type={"text"} name={"wname"}/>
             </td>
             <td>Password</td>
             <td>
-              <input type={"password"} name={"wpass"} />
+              <input type={"password"} name={"wpass"}/>
             </td>
           </tr>
           <tr>

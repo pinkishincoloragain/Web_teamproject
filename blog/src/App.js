@@ -101,7 +101,7 @@ class App extends React.Component {
           <Section id="section6" />
           <Descript name="Make comment on this place!" color="#E2DFD8" />
           <div className="Contentdiv">
-            <Comments color="#E2DFD8" address={fullWord}/>
+            <Comments color="#E2DFD8" address={fullWord} className = "Commentsdiv"/>
           </div>
         </div>
         <Navbar />

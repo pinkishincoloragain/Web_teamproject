@@ -60,16 +60,14 @@ class Comments extends React.Component{
         this.handleShow(e)
     }
 
-    handleShow = e => {
+    handleShow = async (e) => {
         e.preventDefault()
-        let arr = []
+        const arr = []
         console.log("show()")
-        axios.get('showComments.php?w3=' + this.props.address)
-            .then(function (response){
-                for(let i=0;i<response.data.length;i++){
-                    arr.push(response.data[i])
-                }
-            })
+        const response = await axios.get('showComments.php?w3=' + this.props.address)
+        response.data.forEach(row=>{
+            arr.push(row)
+        })
         this.setState({
             comments: arr
         })

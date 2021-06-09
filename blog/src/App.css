@@ -370,9 +370,10 @@ td {
 }
 
 .scrollComments{
-  background-color: #9fcdff;
+  background-color: #95999c;
   width : 60vw;
-  height: 13vw;
+  height: 12vw;
+  margin-top: -1vw;
   margin-left: 10vw;
   margin-right: 10vw;
   overflow: auto;

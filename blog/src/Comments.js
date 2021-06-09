@@ -12,16 +12,27 @@ class CommentsInfo extends React.Component{
         } else {
             alert("비밀번호가 틀렸습니다!");
         }
+
     }
     render() {
         return(
-            <div>
-                <span>Name : {this.props.comments['wname']}</span><br/>
-                <span>Content : {this.props.comments['content']}</span><br/>
-                <span>Date : {this.props.comments['wdate']}</span><br/>
-                <span><button onChange={Comments.handleChange} onClick={() => this.deleteComment(this.props.comments['wid'], this.props.comments['wpass'])}>ㅡ</button></span>
+            <table border={0}>
+                <tr>
+                    <td>
+                        Name : {this.props.comments['wname']}
+                    </td>
+                    <td>
+                        Content : {this.props.comments['content']}
+                    </td>
+                    <td>
+                        Date : {this.props.comments['wdate']}
+                    </td>
+                    <td>
+                        <button onClick={() => this.deleteComment(this.props.comments['wid'], this.props.comments['wpass'])}>ㅡ</button>
+                    </td>
+                </tr>
                 <hr/>
-            </div>
+            </table>
         );
     }
 }
@@ -89,7 +100,7 @@ class Comments extends React.Component{
 
         return(
           <div className={"ContentBox"} style={{backgroundColor: this.props.color}}>
-              <p onChange={this.handleW3}>{this.state.w3}</p>
+              <p>{this.props.address}</p>
               <form onSubmit={this.handleAdd} id={"addForm"}>
                   <table border={5}  className="one_table" >
                       <tr>

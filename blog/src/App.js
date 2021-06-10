@@ -12,6 +12,7 @@ import Navbar from "./Navbar";
 import { searchYouTube } from "./searchYouTube";
 import { fakeData } from "./fakeData";
 import Comments from "./Comments";
+import axios from "axios";
 
 const youTube = {
   query: "",
@@ -31,6 +32,24 @@ class App extends React.Component {
     this.handleSearch = this.handleSearch.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
+
+  async handleArticle(fullWord) {
+
+    const response = await axios.get("/naverNews.php?w3=" + fullWord)
+    console.log(response.data)
+    // const config = {
+    //   'Content-Type': 'application/json',
+    //   'Accept': 'application/json, odata=verbose'
+    // }
+    // fetch("/naverNews.php?w3=" + fullWord, config)
+    //     .then(function (response) {
+    //       return response.json();
+    //     })
+    //     .then(function (json) {
+    //       console.log(json);
+    //     });
+  }
+
   // API를 요청하고 그에 따른 응답을 상태에 반영하는 함수
   goToSearch() {
     searchYouTube(youTube, (result) => {
@@ -46,6 +65,7 @@ class App extends React.Component {
     // alert("change");
     youTube.query = newQuery;
     this.goToSearch();
+    this.handleArticle(fullWord);
   }
 
   handleChange(videoKey) {

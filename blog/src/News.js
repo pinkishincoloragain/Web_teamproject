@@ -4,8 +4,12 @@ import axios from "axios";
 
 class NewsInfo extends React.Component{
     render() {
+        const description = this.props.articles['description'].replace("<b>", "").replace("</b>", "").replace("'&quot;'", "").replace("&amp;", "")
         return(
-            <table border={0} className={"commentTable"}>
+            <table border={0}>
+                <tr>
+                    <h2>#{this.props.articles['word']}</h2>
+                </tr>
                 <tr>
                     <td>
                         title: {this.props.articles['title']}
@@ -13,7 +17,7 @@ class NewsInfo extends React.Component{
                 </tr>
                 <tr>
                     <td>
-                        description: {this.props.articles['description']}
+                        description: {description.replace("<b>", "").replace("</b>", "").replace("&quot;", "").replace("&amp;", "")}
                     </td>
                 </tr>
                 <hr/>
@@ -50,21 +54,20 @@ class News extends React.Component{
     }
 
     render() {
+        let words = this.props.address.split('.')
+        console.log(words)
         const mapToComponent = data =>{
             return data.map((articles, i) => {
                 console.log("NewsInfo")
-                return (<NewsInfo articles = {articles} key={i}/>);
+                return (<NewsInfo words = {words} articles = {articles} key={i}/>);
             });
         }
         return(
-            <div style={{backgroundColor: this.props.color}}>
-                <p>{this.props.address}</p>
+            <div className={"ContentBox"} style={{backgroundColor: this.props.color}}>
                 <button onClick={this.handleShow} onChange={this.handleChange}>
                     뉴스 보여줘욥
                 </button>
-                <div>
-                    {mapToComponent(this.state.articles)}
-                </div>
+                {mapToComponent(this.state.articles)}
             </div>
         );
     }

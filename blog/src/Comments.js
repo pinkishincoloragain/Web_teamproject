@@ -3,17 +3,6 @@ import "./App.css"
 import axios from "axios";
 
 class CommentsInfo extends React.Component{
-    // deleteComment = (wid, wpass) => {
-    //     let inputPass = prompt("비밀번호를 입력하세요");
-    //     console.log("delete()")
-    //     if (inputPass === wpass) {
-    //         let response = fetch("/deleteComment.php?wid=" + wid);
-    //         alert("글이 삭제되었습니다!");
-    //     } else {
-    //         alert("비밀번호가 틀렸습니다!");
-    //     }
-    //
-    // }
     render() {
         return(
             <table border={0} className={"commentTable"}>
@@ -27,9 +16,6 @@ class CommentsInfo extends React.Component{
                     <td>
                         Date : {this.props.comments['wdate']}
                     </td>
-                    {/*<td>*/}
-                    {/*    <button onClick={() => this.deleteComment(this.props.comments['wid'], this.props.comments['wpass'])}>ㅡ</button>*/}
-                    {/*</td>*/}
                 </tr>
                 <hr/>
             </table>
@@ -112,12 +98,6 @@ class Comments extends React.Component{
                               <input type={"submit"} value={"+"}/>
                           </td>
                       </tr>
-                      {/*<tr>*/}
-                      {/*    <td>Password</td>*/}
-                      {/*    <td>*/}
-                      {/*        <input type={"password"} name={"wpass"} value={this.state.wpass} onChange={this.handleChange} className={"TextBox"}/>*/}
-                      {/*    </td>*/}
-                      {/*</tr>*/}
                       <tr>
                           <td colSpan={4}>
                               <textarea placeholder={"내용을 입력하세요"} name={"content"} value={this.state.content} onChange={this.handleChange} className={"InputBox"}/>

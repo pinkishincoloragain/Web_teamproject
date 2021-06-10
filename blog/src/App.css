@@ -358,3 +358,7 @@ p.typing::after {
 html {
   scroll-behavior: smooth;
 }
+
+.one_table {
+  width: 30vw;
+}

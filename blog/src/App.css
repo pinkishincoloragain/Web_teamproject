@@ -372,9 +372,13 @@ td {
 .scrollComments{
   background-color: #95999c;
   width : 60vw;
-  height: 12vw;
+  height: 16vw;
   margin-top: -1vw;
   margin-left: 10vw;
   margin-right: 10vw;
   overflow: auto;
+}
+
+.commentTable{
+  width: 60vw;
 }

@@ -13,14 +13,13 @@ import { searchYouTube } from "./searchYouTube";
 import { fakeData } from "./fakeData";
 import Comments from "./Comments";
 import axios from "axios";
+import News from "./News";
 
 const youTube = {
   query: "",
   max: 1,
-  key: "AIzaSyAYtQoo4ySatdc2Ul7tM8h4h4W_VMXhFbM",
+  //key: "AIzaSyAYtQoo4ySatdc2Ul7tM8h4h4W_VMXhFbM",
 };
-
-var fullWord;
 
 class App extends React.Component {
   constructor(props) {
@@ -28,26 +27,10 @@ class App extends React.Component {
     this.state = {
       videos: fakeData,
       current: fakeData[0],
+      fullWord: ""
     };
     this.handleSearch = this.handleSearch.bind(this);
     this.handleChange = this.handleChange.bind(this);
-  }
-
-  async handleArticle(fullWord) {
-
-    const response = await axios.get("/naverNews.php?w3=" + fullWord)
-    console.log(response.data)
-    // const config = {
-    //   'Content-Type': 'application/json',
-    //   'Accept': 'application/json, odata=verbose'
-    // }
-    // fetch("/naverNews.php?w3=" + fullWord, config)
-    //     .then(function (response) {
-    //       return response.json();
-    //     })
-    //     .then(function (json) {
-    //       console.log(json);
-    //     });
   }
 
   // API를 요청하고 그에 따른 응답을 상태에 반영하는 함수
@@ -59,13 +42,14 @@ class App extends React.Component {
   // 검색 버튼을 누르면 최종적으로 실행되는 함수
   // 새로운 검색어(newQuery)를 받아서 youTube 객체에 반영하고 goToSearch 메소드 실행
   handleSearch(newQuery) {
-    fullWord = newQuery;
+    this.setState({
+      fullWord: newQuery
+    })
     newQuery = newQuery.split(".");
     alert("change: " + newQuery[0]);
     // alert("change");
     youTube.query = newQuery;
     this.goToSearch();
-    this.handleArticle(fullWord);
   }
 
   handleChange(videoKey) {
@@ -106,7 +90,9 @@ class App extends React.Component {
           <Section id="section4" />
           <Descript name="Your News" color="#2DB400" />
           <div className="Contentdiv">
-            <Content color="#2DB400" />
+            {this.state.fullWord === "" ?
+                (<Content color="#2DB400" />) :
+                (<News color="#2DB400" address={this.state.fullWord}/>)}
           </div>
         </div>
         <div className="page">
@@ -121,7 +107,7 @@ class App extends React.Component {
           <Section id="section6" />
           <Descript name="Make comment on this place!" color="#E2DFD8" />
           <div className="Contentdiv">
-            <Comments color="#E2DFD8" address={fullWord} className = "Commentsdiv"/>
+            <Comments color="#E2DFD8" address={this.state.fullWord} className = "Commentsdiv"/>
           </div>
         </div>
         <Navbar />

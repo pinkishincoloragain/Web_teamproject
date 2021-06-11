@@ -29,7 +29,7 @@ export default class Navbar extends Component {
     return (
       <nav className="nav" id="navbar">
         <div className="nav-content">
-          Move
+          Nav
           <ul className="nav-items">
             <li className="nav-item" style={style1}>
               <Link
@@ -41,6 +41,9 @@ export default class Navbar extends Component {
                 duration={100}
               >
                 {/* Home */}H
+                <text id="home">
+                  o<br />m<br />e
+                </text>
               </Link>
             </li>
             <li className="nav-item" style={style2}>

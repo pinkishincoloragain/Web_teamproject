@@ -26,7 +26,7 @@ class App extends React.Component {
     this.state = {
       videos: fakeData,
       current: fakeData[0],
-      fullWord: ""
+      fullWord: "",
     };
     this.handleSearch = this.handleSearch.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -42,8 +42,8 @@ class App extends React.Component {
   // 새로운 검색어(newQuery)를 받아서 youTube 객체에 반영하고 goToSearch 메소드 실행
   handleSearch(newQuery) {
     this.setState({
-      fullWord: newQuery
-    })
+      fullWord: newQuery,
+    });
     newQuery = newQuery.split(".");
     alert("change: " + newQuery[0]);
     // alert("change");
@@ -92,9 +92,11 @@ class App extends React.Component {
           <Section id="section4" />
           <Descript name="Your News" color="#2DB400" />
           <div className="Contentdiv">
-            {this.state.fullWord === "" ?
-                (<Content color="#2DB400" />) :
-                (<News color="#2DB400" address={this.state.fullWord}/>)}
+            {this.state.fullWord === "" ? (
+              <Content color="#2DB400" />
+            ) : (
+              <News color="#2DB400" address={this.state.fullWord} />
+            )}
           </div>
         </div>
         <div className="page">
@@ -109,11 +111,11 @@ class App extends React.Component {
           <Section id="section6" />
           <Descript name="Make comment on this place!" color="#E2DFD8" />
           <div className="Contentdiv">
-<<<<<<< HEAD
-            <Comments color="#E2DFD8" address={fullWord} />
-=======
-            <Comments color="#E2DFD8" address={this.state.fullWord} className = "Commentsdiv"/>
->>>>>>> origin/one
+            <Comments
+              color="#E2DFD8"
+              address={this.state.fullWord}
+              className="Commentsdiv"
+            />
           </div>
         </div>
         <Navbar />

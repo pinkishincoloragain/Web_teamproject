@@ -9,16 +9,17 @@ import Video from "./Video";
 import Section from "./Section";
 import Navbar from "./Navbar";
 import { searchYouTube } from "./searchYouTube";
+import { searchNews } from "./searchNews";
 import { fakeData } from "./fakeData";
 import Comments from "./Comments";
-import axios from "axios";
 import News from "./News";
 
 const query = ["", "", ""];
+const arr = [];
 
 const youTube = {
   max: 1,
-  key: "AIzaSyCRb0Goz-NGIc-RL1GIn5yjTD28",
+  key: "", //AIzaSyCRb0GozgfE5bwF-NGIc-RL1GIn5yjTD28
 };
 
 class App extends React.Component {
@@ -29,6 +30,7 @@ class App extends React.Component {
       second: fakeData[0],
       third: fakeData[0],
       fullWord: "",
+      articles: [],
     };
     this.handleSearch = this.handleSearch.bind(this);
   }
@@ -49,6 +51,10 @@ class App extends React.Component {
   // 검색 버튼을 누르면 최종적으로 실행되는 함수
   // 새로운 검색어(newQuery)를 받아서 youTube 객체에 반영하고 goToSearch 메소드 실행
   handleSearch(newQuery) {
+    searchNews(newQuery, (result) => {
+      this.setState({ articles: result });
+      console.log(this.state.articles);
+    });
     this.setState({
       fullWord: newQuery,
     });
@@ -83,7 +89,11 @@ class App extends React.Component {
             {this.state.fullWord === "" ? (
               <Content color="#2DB400" />
             ) : (
-              <News color="#2DB400" address={this.state.fullWord} />
+              <News
+                color="#2DB400"
+                address={this.state.fullWord}
+                articles={this.state.articles}
+              />
             )}
           </div>
         </div>

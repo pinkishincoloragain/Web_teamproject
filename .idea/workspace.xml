@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f24cbd44-309a-4030-b0bf-378bc178ad28" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/blog/node_modules/.cache/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/Video.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/Video.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/searchYouTube.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/searchYouTube.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/src/Comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/Comments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/src/News.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/News.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +26,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
@@ -38,6 +42,8 @@
       <option name="presentableId" value="Default" />
       <updated>1623394003320</updated>
       <workItem from="1623394008951" duration="746000" />
+      <workItem from="1623395924492" duration="108000" />
+      <workItem from="1623396047814" duration="2292000" />
     </task>
     <servers />
   </component>

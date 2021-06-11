@@ -41,6 +41,7 @@ class News extends React.Component{
     }
 
     handleShow = async (e) =>{
+        alert("check");
         e.preventDefault()
         const arr = []
         const response = await axios.get("naverNews.php?w3=" + this.props.address)
@@ -64,9 +65,9 @@ class News extends React.Component{
         }
         return(
             <div className={"ContentBox"} style={{backgroundColor: this.props.color}}>
-                <button onClick={this.handleShow} onChange={this.handleChange}>
-                    뉴스 보여줘욥
-                </button>
+                {/*<button onClick={this.handleShow} onChange={this.handleChange}>*/}
+                {/*    뉴스 보여줘욥*/}
+                {/*</button>*/}
                 {mapToComponent(this.state.articles)}
             </div>
         );

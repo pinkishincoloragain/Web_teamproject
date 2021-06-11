@@ -11,14 +11,15 @@ import Navbar from "./Navbar";
 import { searchYouTube } from "./searchYouTube";
 import { fakeData } from "./fakeData";
 import Comments from "./Comments";
-import axios from "axios";
 import News from "./News";
+import axios from "axios";
 
 const query = ["", "", ""];
+const arr = [];
 
 const youTube = {
   max: 1,
-  key: "AIzaSyCRb0GozgfE5bwF-NGIc-RL1GIn5yjTD28",
+  key: "", //AIzaSyCRb0GozgfE5bwF-NGIc-RL1GIn5yjTD28
 };
 
 class App extends React.Component {
@@ -29,8 +30,22 @@ class App extends React.Component {
       second: fakeData[0],
       third: fakeData[0],
       fullWord: "",
+      article: [],
     };
     this.handleSearch = this.handleSearch.bind(this);
+  }
+
+  async handleShow() {
+    alert("check");
+    const response = await axios.get("naverNews.php?w3=" + this.props.address)
+    console.log(response.data)
+    response.data.forEach(row=>{
+      arr.push(row)
+    })
+    this.setState({
+      articles:arr
+    })
+
   }
 
   // API를 요청하고 그에 따른 응답을 상태에 반영하는 함수
@@ -56,6 +71,7 @@ class App extends React.Component {
     for (let i = 0; i < 3; i++) {
       query[i] = newQuery[i];
     }
+    this.handleShow();
     this.goToSearch();
   }
 

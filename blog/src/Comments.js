@@ -85,7 +85,6 @@ class Comments extends React.Component {
         className={"ContentBox"}
         style={{ backgroundColor: this.props.color }}
       >
-        <p>{this.props.address}</p>
         <form onSubmit={this.handleAdd} id={"addForm"}>
           <table border={5} className="one_table">
             <tr>

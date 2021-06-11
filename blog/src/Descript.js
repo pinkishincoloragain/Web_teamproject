@@ -8,7 +8,11 @@ class Descript extends React.Component {
   render() {
     // eslint-disable-next-line
     return (
-      <h1 className="Descript" style={{ color: this.props.color }}>
+      <h1
+        className="Descript"
+        id={this.props.id}
+        style={{ color: this.props.color }}
+      >
         &#47;&#47;&#47; {this.props.name}{" "}
       </h1>
     );

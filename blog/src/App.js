@@ -14,29 +14,37 @@ import Comments from "./Comments";
 import axios from "axios";
 import News from "./News";
 
+const query =["","",""];
+
 const youTube = {
-  query: "",
   max: 1,
-  //key: "AIzaSyAYtQoo4ySatdc2Ul7tM8h4h4W_VMXhFbM",
+  key: "AIzaSyCRb0GozgfE5bwF-NGIc-RL1GIn5yjTD28",
 };
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      videos: fakeData,
-      current: fakeData[0],
+      first: fakeData[0],
+      second: fakeData[0],
+      third: fakeData[0],
       fullWord: "",
     };
     this.handleSearch = this.handleSearch.bind(this);
-    this.handleChange = this.handleChange.bind(this);
   }
 
   // API를 요청하고 그에 따른 응답을 상태에 반영하는 함수
   goToSearch() {
-    searchYouTube(youTube, (result) => {
-      this.setState({ videos: [...result], current: result[0] });
+    searchYouTube(query[0], youTube, (result) => {
+      this.setState({ videos: [...result], first: result[0] });
     });
+    searchYouTube(query[1],youTube, (result) => {
+      this.setState({ videos: [...result], second: result[0] });
+    });
+    searchYouTube(query[2],youTube, (result) => {
+      this.setState({ videos: [...result], third: result[0] });
+    });
+    setTimeout(1000);
   }
   // 검색 버튼을 누르면 최종적으로 실행되는 함수
   // 새로운 검색어(newQuery)를 받아서 youTube 객체에 반영하고 goToSearch 메소드 실행
@@ -45,22 +53,10 @@ class App extends React.Component {
       fullWord: newQuery,
     });
     newQuery = newQuery.split(".");
-    alert("change: " + newQuery[0]);
-    // alert("change");
-    youTube.query = newQuery[0];
-    this.goToSearch();
-  }
-
-  handleChange(videoKey) {
-    for (let i = 0; i < this.state.videos.length; i++) {
-      if (videoKey === this.state.videos[i].id.videoId) {
-        this.setState({ current: this.state.videos[i] });
-        break;
-      }
+    for(let i=0; i<3; i++)
+    {
+      query[i] = newQuery[i];
     }
-  }
-
-  componentDidMount() {
     this.goToSearch();
   }
 
@@ -96,8 +92,11 @@ class App extends React.Component {
           <Section id="section5" />
           <Descript name="Your Youtube videos" color="#C4302B" />
           <div className="Contentdiv">
-            {/* <Content color="#C4302B" /> */}
-            <Video video={this.state.current} />
+            {this.state.fullWord === "" ? (
+                <Content color="#C4302B" />
+            ) : (
+                <Video first={this.state.first} second={this.state.second} third={this.state.third} address={this.state.fullWord}  color="#C4302B" />
+            )}
           </div>
         </div>
         <div className="page">

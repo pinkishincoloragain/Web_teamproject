@@ -9,10 +9,10 @@ import Video from "./Video";
 import Section from "./Section";
 import Navbar from "./Navbar";
 import { searchYouTube } from "./searchYouTube";
+import { searchNews } from "./searchNews";
 import { fakeData } from "./fakeData";
 import Comments from "./Comments";
 import News from "./News";
-import axios from "axios";
 
 const query = ["", "", ""];
 const arr = [];
@@ -30,22 +30,9 @@ class App extends React.Component {
       second: fakeData[0],
       third: fakeData[0],
       fullWord: "",
-      article: [],
+      articles: [],
     };
     this.handleSearch = this.handleSearch.bind(this);
-  }
-
-  async handleShow() {
-    alert("check");
-    const response = await axios.get("naverNews.php?w3=" + this.props.address)
-    console.log(response.data)
-    response.data.forEach(row=>{
-      arr.push(row)
-    })
-    this.setState({
-      articles:arr
-    })
-
   }
 
   // API를 요청하고 그에 따른 응답을 상태에 반영하는 함수
@@ -64,6 +51,10 @@ class App extends React.Component {
   // 검색 버튼을 누르면 최종적으로 실행되는 함수
   // 새로운 검색어(newQuery)를 받아서 youTube 객체에 반영하고 goToSearch 메소드 실행
   handleSearch(newQuery) {
+    searchNews(newQuery, (result) => {
+      this.setState({ articles: result });
+      console.log(this.state.articles);
+    });
     this.setState({
       fullWord: newQuery,
     });
@@ -71,7 +62,6 @@ class App extends React.Component {
     for (let i = 0; i < 3; i++) {
       query[i] = newQuery[i];
     }
-    this.handleShow();
     this.goToSearch();
   }
 
@@ -99,7 +89,11 @@ class App extends React.Component {
             {this.state.fullWord === "" ? (
               <Content color="#2DB400" />
             ) : (
-              <News color="#2DB400" address={this.state.fullWord} />
+              <News
+                color="#2DB400"
+                address={this.state.fullWord}
+                articles={this.state.articles}
+              />
             )}
           </div>
         </div>

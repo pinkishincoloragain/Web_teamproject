@@ -14,7 +14,7 @@ import Comments from "./Comments";
 import axios from "axios";
 import News from "./News";
 
-const query =["","",""];
+const query = ["", "", ""];
 
 const youTube = {
   max: 1,
@@ -38,10 +38,10 @@ class App extends React.Component {
     searchYouTube(query[0], youTube, (result) => {
       this.setState({ videos: [...result], first: result[0] });
     });
-    searchYouTube(query[1],youTube, (result) => {
+    searchYouTube(query[1], youTube, (result) => {
       this.setState({ videos: [...result], second: result[0] });
     });
-    searchYouTube(query[2],youTube, (result) => {
+    searchYouTube(query[2], youTube, (result) => {
       this.setState({ videos: [...result], third: result[0] });
     });
     setTimeout(1000);
@@ -53,8 +53,7 @@ class App extends React.Component {
       fullWord: newQuery,
     });
     newQuery = newQuery.split(".");
-    for(let i=0; i<3; i++)
-    {
+    for (let i = 0; i < 3; i++) {
       query[i] = newQuery[i];
     }
     this.goToSearch();
@@ -93,9 +92,15 @@ class App extends React.Component {
           <Descript name="Your Youtube videos" color="#C4302B" />
           <div className="Contentdiv">
             {this.state.fullWord === "" ? (
-                <Content color="#C4302B" />
+              <Content color="#C4302B" />
             ) : (
-                <Video first={this.state.first} second={this.state.second} third={this.state.third} address={this.state.fullWord}  color="#C4302B" />
+              <Video
+                first={this.state.first}
+                second={this.state.second}
+                third={this.state.third}
+                address={this.state.fullWord}
+                color="#C4302B"
+              />
             )}
           </div>
         </div>

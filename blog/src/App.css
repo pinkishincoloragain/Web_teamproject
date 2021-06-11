@@ -359,6 +359,59 @@ html {
   scroll-behavior: smooth;
 }
 
+<<<<<<< HEAD
 .one_table {
   width: 30vw;
 }
+=======
+.one_table{
+  width : 60vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+
+.Commentsdiv {
+  width: 60vw;
+  align-items: center;
+}
+
+.TextBox{
+  min-width: 40vw;
+  margin-left: 0vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+td {
+  padding: 0px;
+  margin: 0px;
+}
+
+.InputBox{
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  width: 50vw;
+  padding : 0px;
+}
+
+.refreshButton{
+  position: relative;
+  left:25vw;
+  top:-2vw;
+}
+
+.scrollComments{
+  background-color: #95999c;
+  width : 60vw;
+  height: 17vw;
+  margin-top: -1vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  overflow: auto;
+}
+
+.commentTable{
+  width: 60vw;
+}
+>>>>>>> origin/one

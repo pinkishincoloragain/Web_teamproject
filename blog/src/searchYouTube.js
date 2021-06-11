@@ -1,6 +1,6 @@
 
 
-export const searchYouTube = ({query, max, key}, callback) => {
+export const searchYouTube = (query,{max, key}, callback) => {
   const httpRequest = new XMLHttpRequest();
 
   var optionParams = {

@@ -408,3 +408,9 @@ td {
 .commentTable {
   width: 60vw;
 }
+
+.WordTitle {
+  width:33%;
+  display: inline-block;
+  text-align: center;
+}

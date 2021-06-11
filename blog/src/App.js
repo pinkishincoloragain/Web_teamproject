@@ -76,7 +76,7 @@ class App extends React.Component {
 
         <div className="page">
           <Section id="section2" />
-          <Descript name="Let's get it started" color="#F7E600" />
+          <Descript name="Let's get it started" id="des2" color="#F7E600" />
           <div className="Contentdiv">
             {/* <Content color="#F7E600" /> */}
             <MapComponent search={this.handleSearch} />
@@ -84,7 +84,7 @@ class App extends React.Component {
         </div>
         <div className="page">
           <Section id="section4" />
-          <Descript name="Your News" color="#2DB400" />
+          <Descript name="Your News" id="des4" color="#2DB400" />
           <div className="Contentdiv">
             {this.state.fullWord === "" ? (
               <Content color="#2DB400" />
@@ -99,7 +99,7 @@ class App extends React.Component {
         </div>
         <div className="page">
           <Section id="section5" />
-          <Descript name="Your Youtube videos" color="#C4302B" />
+          <Descript name="Your Youtube videos" id="des5" color="#C4302B" />
           <div className="Contentdiv">
             {this.state.fullWord === "" ? (
               <Content color="#C4302B" />
@@ -116,7 +116,11 @@ class App extends React.Component {
         </div>
         <div className="page">
           <Section id="section6" />
-          <Descript name="Make comment on this place!" color="#E2DFD8" />
+          <Descript
+            name="Make comment on this place!"
+            id="des6"
+            color="#E2DFD8"
+          />
           <div className="Contentdiv">
             <Comments
               color="#E2DFD8"

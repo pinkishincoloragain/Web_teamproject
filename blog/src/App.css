@@ -22,6 +22,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   font-size: 12vw;
   color: white;
+  text-shadow: 0.2vw 0.2vw #fbff00;
 }
 
 .imgholder {
@@ -229,6 +230,7 @@ nav ul li:hover a.active span {
   color: ivory;
   line-height: 8vh;
   animation: wiggle 5s infinite;
+  box-shadow: 0.2vw 0.2vw 10px gray;
 }
 
 .wiggle {
@@ -329,6 +331,19 @@ p.typing::after {
   animation: fadein 3s;
 }
 
+#des2 {
+  text-shadow: 0.2vw 0.2vw 1px #c8ca49;
+}
+#des4 {
+  text-shadow: 0.2vw 0.2vw 1px #0b500e;
+}
+#des5 {
+  text-shadow: 0.2vw 0.2vw 1px #700202;
+}
+#des6 {
+  text-shadow: 0.2vw 0.2vw 1px #838383;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -352,6 +367,7 @@ p.typing::after {
   margin-bottom: 20vh;
   border-width: 4vh;
   border-radius: 3vh 3vh 3vh 3vh;
+  box-shadow: 0.4vw 0.4vw 3px #4b5466;
 
   align-items: center;
   justify-content: center;
@@ -374,9 +390,6 @@ p.typing::after {
   border: solid 1vh #282c34;
   /* background-color: midnightblue; */
   text-align: center;
-}
-
-.changeButton {
 }
 
 @keyframes App-logo-spin {
@@ -443,7 +456,7 @@ td {
 }
 
 .WordTitle {
-  width:33%;
+  width: 33vw;
   display: inline-block;
   text-align: center;
 }

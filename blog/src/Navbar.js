@@ -7,9 +7,6 @@ const style1 = {
 const style2 = {
   background: "#F7E600",
 };
-const style3 = {
-  background: "#543E47",
-};
 const style4 = {
   background: "#2DB400",
 };
@@ -42,7 +39,7 @@ export default class Navbar extends Component {
               >
                 {/* Home */}H
                 <text id="home">
-                  o<br />m<br />e
+                  o<p />m<p />e
                 </text>
               </Link>
             </li>

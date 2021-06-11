@@ -21,9 +21,9 @@ class Header extends React.Component {
             onClick={() =>
               Swal.fire({
                 title: "<strong>W3W API를 아십니까..?</strong>",
-                icon: "warning",
                 html: `모르시면 제가 직접 알려 드리겠습니다..
                 설명설명`,
+                icon: "success",
                 showCloseButton: true,
                 showCancelButton: false,
                 focusConfirm: false,
@@ -36,8 +36,8 @@ class Header extends React.Component {
                 backdrop: `
     rgba(0,0,123,0.4)
     url("https://sweetalert2.github.io/images/nyan-cat.gif")
-    left top
-    no-repeat
+    center bottom
+    repeat
   `,
               }).then((result) => {
                 if (result.value) {
@@ -54,7 +54,6 @@ class Header extends React.Component {
             onClick={() =>
               Swal.fire({
                 title: "<strong>카카오맵 API를 아십니까..?</strong>",
-                icon: "warning",
                 html: `모르시면 제가 직접 알려 드리겠습니다..
                 설명설명`,
                 showCloseButton: true,
@@ -69,8 +68,8 @@ class Header extends React.Component {
                 backdrop: `
     rgba(0,0,123,0.4)
     url("https://sweetalert2.github.io/images/nyan-cat.gif")
-    left top
-    no-repeat
+    center bottom
+    repeat
   `,
               }).then((result) => {
                 if (result.value) {

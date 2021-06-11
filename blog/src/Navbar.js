@@ -55,18 +55,6 @@ export default class Navbar extends Component {
                 {/* Map */}M
               </Link>
             </li>
-            <li className="nav-item" style={style3}>
-              <Link
-                activeClass="active"
-                to="section3"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={100}
-              >
-                {/* Place */}P
-              </Link>
-            </li>
             <li className="nav-item" style={style4}>
               <Link
                 activeClass="active"

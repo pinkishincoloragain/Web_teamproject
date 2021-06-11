@@ -82,13 +82,6 @@ class App extends React.Component {
           </div>
         </div>
         <div className="page">
-          <Section id="section3" />
-          <Descript name="Your Place" color="#543E47" />
-          <div className="Contentdiv">
-            <Content color="#543E47" />
-          </div>
-        </div>
-        <div className="page">
           <Section id="section4" />
           <Descript name="Your News" color="#2DB400" />
           <div className="Contentdiv">

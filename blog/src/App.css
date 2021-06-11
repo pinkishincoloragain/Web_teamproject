@@ -125,6 +125,32 @@ section {
   height: 10vh;
 } */
 
+img:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(10deg);
+  }
+  95% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 nav ul li a span {
   background: #fff;
 }
@@ -175,14 +201,14 @@ nav ul li:hover a.active span {
   border-radius: 100%;
 } */
 
-.pg-horizontal nav {
+/* .pg-horizontal nav {
   width: 100vw;
   left: 0;
   bottom: 20px;
 }
 .pg-horizontal nav ul li {
   float: left;
-}
+} */
 
 /* !!!!!!! */
 
@@ -210,6 +236,15 @@ nav ul li:hover a.active span {
   font-size: 3vh;
   color: ivory;
   line-height: 8vh;
+  animation: wiggle 2.5s infinite;
+}
+
+.wiggle {
+  display: inline-block;
+}
+
+.wiggle:hover {
+  animation: none;
 }
 
 .nav-item:hover {

@@ -83,12 +83,11 @@ class Comments extends React.Component {
     return (
       <div
         className={"ContentBox"}
-        style={{ backgroundColor: this.props.color }}
-      >
-        <form onSubmit={this.handleAdd} id={"addForm"}>
+        style={{ backgroundColor: this.props.color }}>
+        <form onSubmit={this.handleAdd} id="addForm">
           <table border={5} className="one_table">
             <tr>
-              <td>Name</td>
+              <td>이름</td>
               <td>
                 <input
                   type={"text"}
@@ -105,7 +104,7 @@ class Comments extends React.Component {
             <tr>
               <td colSpan={4}>
                 <textarea
-                  placeholder={"내용을 입력하세요"}
+                  placeholder={"적어보세요."}
                   name={"content"}
                   value={this.state.content}
                   onChange={this.handleChange}
@@ -116,17 +115,17 @@ class Comments extends React.Component {
           </table>
         </form>
         <br />
-        <h3>Comments</h3>
-        <button
-          className={"refreshButton"}
-          onClick={this.handleShow}
-          onChange={this.handleChange}
-        >
-          refresh
-        </button>
+        <h3>댓글</h3>
+
         <div className={"scrollComments"}>
           {mapToComponent(this.state.comments)}
         </div>
+        <button
+          className={"refreshButton"}
+          onClick={this.handleShow}
+          onChange={this.handleChange}>
+          새로고침
+        </button>
       </div>
     );
   }

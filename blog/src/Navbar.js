@@ -26,25 +26,25 @@ export default function Navbar() {
   //     nav: ["H", "M", "N", "Y", "C"],
   //   };
   // }
-  const [home, setHome] = useState("H");
-  const [map, setMap] = useState("M");
-  const [naver, setNaver] = useState("N");
-  const [you, setYou] = useState("Y");
-  const [comment, setComment] = useState("C");
+  const [home, setHome] = useState("홈");
+  const [map, setMap] = useState("지");
+  const [naver, setNaver] = useState("네");
+  const [you, setYou] = useState("유");
+  const [comment, setComment] = useState("댓");
 
   return (
     <nav className="nav" id="navbar">
       <div className="nav-content">
-        <div id="navtext">Go!</div>
+        <div id="navtext">가!</div>
         <ul className="nav-items">
           <li
             className="nav-item"
             style={style1}
             onMouseOver={(event) => {
-              setHome("HOME");
+              setHome("홈화면");
             }}
             onMouseOut={(event) => {
-              setHome("H");
+              setHome("홈");
             }}>
             <Link
               activeClass="active"
@@ -60,10 +60,10 @@ export default function Navbar() {
             className="nav-item"
             style={style2}
             onMouseOver={(event) => {
-              setMap("Map");
+              setMap("지도");
             }}
             onMouseOut={(event) => {
-              setMap("M");
+              setMap("지");
             }}>
             <Link
               activeClass="active"
@@ -79,10 +79,10 @@ export default function Navbar() {
             className="nav-item"
             style={style4}
             onMouseOver={(event) => {
-              setNaver("Naver");
+              setNaver("네이버");
             }}
             onMouseOut={(event) => {
-              setNaver("N");
+              setNaver("네");
             }}>
             <Link
               activeClass="active"
@@ -95,13 +95,13 @@ export default function Navbar() {
             </Link>
           </li>
           <li
-            className="nav-item-2"
+            className="nav-item"
             style={style5}
             onMouseOver={(event) => {
-              setYou("Youtube");
+              setYou("유튜브");
             }}
             onMouseOut={(event) => {
-              setYou("Y");
+              setYou("유");
             }}>
             <Link
               activeClass="active"
@@ -114,13 +114,13 @@ export default function Navbar() {
             </Link>
           </li>
           <li
-            className="nav-item-2"
+            className="nav-item"
             style={style6}
             onMouseOver={(event) => {
-              setComment("Comment");
+              setComment("댓글");
             }}
             onMouseOut={(event) => {
-              setComment("C");
+              setComment("댓");
             }}>
             <Link
               activeClass="active"

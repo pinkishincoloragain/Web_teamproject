@@ -9,7 +9,7 @@ class Header extends React.Component {
   render() {
     // eslint-disable-next-line
     return (
-      <div>
+      <div className="all">
         <h1 className="Header">
           <p className="typing">지금. 당신이. 서 있는 곳.</p>
         </h1>
@@ -18,6 +18,7 @@ class Header extends React.Component {
             className="Logo1"
             src={w3w}
             alt="w3w"
+            border="0"
             onClick={() =>
               Swal.fire({
                 title: "<strong>W3W API를 아십니까..?</strong>",
@@ -46,11 +47,12 @@ class Header extends React.Component {
               })
             }
           />
-          <img className="xImg" src={x} alt="x"></img>
+          <img className="xImg" src={x} alt="x" border="0"></img>
           <img
             className="Logo2"
             src={kakao}
             alt="kakao"
+            border="0"
             onClick={() =>
               Swal.fire({
                 title: "<strong>카카오맵 API를 아십니까..?</strong>",
@@ -78,12 +80,6 @@ class Header extends React.Component {
               })
             }
           />
-          <div>
-            {/* <div className="textholder">
-              <span className="imgtext">W3W</span>
-              <span className="imgtext">KaKaoMap</span>
-            </div> */}
-          </div>
         </div>
       </div>
     );

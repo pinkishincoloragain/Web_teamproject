@@ -13,6 +13,7 @@ import { searchNews } from "./searchNews";
 import { fakeData } from "./fakeData";
 import Comments from "./Comments";
 import News from "./News";
+import Footer from "./Footer";
 
 const query = ["", "", ""];
 
@@ -68,14 +69,14 @@ class App extends React.Component {
     return (
       <div className="App">
         <Section id="section1" />
+        <Navbar />
+
         <Header />
         <ProgressBar height="2vh" bgcolor="#F43059" duration="1" />
-
         <Bar />
-
         <div className="page">
           <Section id="section2" />
-          <Descript name="Let's get it started" id="des2" color="#F7E600" />
+          <Descript name="시작해봅시다." id="des2" color="#F7E600" />
           <div className="Contentdiv">
             {/* <Content color="#F7E600" /> */}
             <MapComponent search={this.handleSearch} />
@@ -83,7 +84,7 @@ class App extends React.Component {
         </div>
         <div className="page">
           <Section id="section4" />
-          <Descript name="Your News" id="des4" color="#2DB400" />
+          <Descript name="읽어봅시다." id="des4" color="#2DB400" />
           <div className="Contentdiv">
             {this.state.fullWord === "" ? (
               <Content color="#2DB400" />
@@ -98,7 +99,7 @@ class App extends React.Component {
         </div>
         <div className="page">
           <Section id="section5" />
-          <Descript name="Your Youtube videos" id="des5" color="#C4302B" />
+          <Descript name="봅시다." id="des5" color="#C4302B" />
           <div className="Contentdiv">
             {this.state.fullWord === "" ? (
               <Content color="#C4302B" />
@@ -116,7 +117,7 @@ class App extends React.Component {
         <div className="page">
           <Section id="section6" />
           <Descript
-            name="Make comment on this place!"
+            name="이 장소에 대한 글을 써 보세요!"
             id="des6"
             color="#E2DFD8"
           />
@@ -128,7 +129,8 @@ class App extends React.Component {
             />
           </div>
         </div>
-        <Navbar />
+
+        <Footer />
       </div>
     );
   }

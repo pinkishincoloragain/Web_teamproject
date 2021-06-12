@@ -242,7 +242,7 @@ nav ul li:hover a.active span {
 .nav {
   background-color: var(--off-white);
   position: sticky;
-  top: 20vh;
+  top: 17vh;
   height: 0px;
   width: 5vw;
   z-index: 1000;
@@ -627,4 +627,71 @@ a:visited {
 a:hover {
   color: black;
   text-decoration: none;
+}
+
+.Footer {
+  font-size: 4vh;
+  width: 96vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-bottom: 5vh;
+  height: 30vh;
+  border-width: 4px;
+  border-style: solid;
+}
+
+.Logosholder {
+  display: flex;
+}
+
+.logos {
+  width: 10vw;
+  margin: 1vw;
+  animation: fadein 2s;
+  transform: rotate(360deg) 4s;
+  animation-delay: 3s;
+}
+
+.logos:hover {
+  transform: rotate(360deg);
+  transition: 1s;
+  cursor: pointer;
+}
+
+#copyright {
+  margin-top: 8vh;
+}
+
+.tt {
+  position: relative;
+  display: inline-block;
+  border-bottom: 2px dotted Sienna;
+  background-color: yellow;
+}
+.tt .tt-text {
+  visibility: hidden;
+  width: 200px;
+  background-color: Indigo;
+  color: Yellow;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px 5px;
+  position: absolute;
+  z-index: 1;
+  top: 200%;
+  left: 50%;
+  margin-left: -105px;
+}
+.tt .tt-text::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent Indigo transparent;
+}
+.tt:hover .tt-text {
+  visibility: visible;
 }

@@ -3,6 +3,9 @@
   src: url("./font/DoHyeon-Regular.ttf") format("truetype");
 }
 
+@use "@material/button";
+@include button.core-styles;
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -65,9 +68,14 @@ body {
 }
 
 .Logo1:hover {
-  transform: rotate(360deg) translateY(-1vw);
+  transform: rotate(360deg);
   transition: 1s;
   cursor: pointer;
+}
+
+.Logo1:active {
+  transition: all ease-in-out 10s 0s;
+  transform: rotate(72000deg);
 }
 
 .xImg {
@@ -101,6 +109,12 @@ body {
   transform: rotate(360deg) translateY(-1vw);
   transition: 1s;
   cursor: pointer;
+}
+
+.Logo2:active {
+  transition: all ease-in 10s 0s;
+  transform: rotate(72000deg);
+  visibility: hidden;
 }
 
 .Bar {
@@ -142,6 +156,24 @@ section {
     transform: rotate(15deg);
   }
   96% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes littlewiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(15deg);
+  }
+  90% {
     transform: rotate(-15deg);
   }
   100% {
@@ -405,6 +437,8 @@ p.typing::after {
 }
 
 #myMap {
+  border-top-right-radius: 2vh;
+  border-top-left-radius: 2vh;
   z-index: 1;
 }
 
@@ -432,24 +466,59 @@ p.typing::after {
   margin-right: 10vw;
   margin-bottom: 20vh;
   border-width: 4vh;
-  border-radius: 0vh 0vh 3vh 3vh;
-  box-shadow: 0.4vw 0.4vw 3px #4b5466;
+  border-radius: 3vh 3vh 3vh 3vh;
+  /* box-shadow: 0.4vw 0.4vw 3px #4b5466; */
 
   align-items: center;
   justify-content: center;
-  border: solid 1vh #282c34;
+  border: solid 1vh #f7e600;
   /* background-color: midnightblue; */
   text-align: center;
 }
 
 #changeButton {
-  border-width: 0px;
-  font-size: 1vw;
   background-color: #fff;
+  text-shadow: 1px 1px 1px rgb(43, 16, 124);
+  border-width: 3px;
+  border: double 1vh #f7e600;
+  /* border-color: royalblue; */
+  /* border-style: groove; */
+  font-size: 200%;
+  /* background-color: rgb(128, 118, 216); */
+  /* box-shadow: 1vh 1vh 1vh rgb(43, 16, 124); */
+}
+
+#wordContainer {
+  display: inline-block;
+}
+
+.word {
+  font-size: 30px;
+  float: left;
+}
+
+#word0 {
+  color: #542e71;
+}
+#word1 {
+  color: #fb3640;
+}
+#word2 {
+  color: #04009a;
 }
 
 #changeButton:hover {
-  color: #0b500e;
+  border-color: #0b500e;
+  animation: littlewiggle 0.5s;
+  transition: all ease 1s 0s;
+  border-color: red;
+  color: red;
+  text-shadow: 1px 1px 1px rgb(185, 17, 185);
+}
+
+#changeButton:active {
+  transition: all ease 2s 0s;
+  border-color: red;
 }
 
 @keyframes App-logo-spin {
@@ -516,9 +585,45 @@ td {
 }
 
 .WordTitle {
-  width: 33vw;
+  float: left;
+  text-decoration: underline;
+  width: 26vw;
   display: inline-block;
   text-align: center;
+}
+
+#title0 {
+  color: #542e71;
+}
+#title1 {
+  color: #fb3640;
+}
+#title2 {
+  color: #04009a;
+}
+
+#middleIframe {
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.vidFrame {
+  border-style: double;
+  border-width: 10px;
+  border-bottom-width: 10px;
+  border-radius: 40px;
+}
+
+.vidFrame:first-of-type {
+  border-color: #542e71;
+}
+
+.vidFrame:nth-of-type(2) {
+  border-color: #fb3640;
+}
+
+.vidFrame:last-of-type {
+  border-color: #04009a;
 }
 
 a:link {

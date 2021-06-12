@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import { AwesomeButton } from "react-awesome-button";
-import "react-awesome-button/dist/styles.css";
 
 // import Loading from "./Loading";
 
@@ -51,8 +49,13 @@ const MapComponent = (props) => {
         .then(function (response) {
           word_address = response.words;
           // setAddress(word_address);
-          var result = document.getElementById("words");
-          result.innerHTML = "/// " + word_address;
+          // var result = document.getElementById("words");
+          var word = word_address.split(".");
+          // result.innerHTML = "/// " + word_address.split();
+          // result.innerHTML = "/// " + word[0];
+          document.getElementById("word0").innerHTML = word[0] + ".";
+          document.getElementById("word1").innerHTML = word[1] + ".";
+          document.getElementById("word2").innerHTML = word[2] + ".";
         });
     });
   }, []);
@@ -60,12 +63,16 @@ const MapComponent = (props) => {
   return (
     <div className="ContentBox-Map">
       <div id="myMap" style={{ width: "100%", height: "88%" }}></div>
-      <h2 id="words">
-        <br></br>
-      </h2>
-      <AwesomeButton id="changeButton" onClick={sendWord}>
-        ///변환하기 !
-      </AwesomeButton>
+      <div id="wordContainer">
+        <div className="word">///&nbsp;</div>
+        <div id="word0" className="word"></div>&nbsp;
+        <div id="word1" className="word"></div>&nbsp;
+        <div id="word2" className="word"></div>&nbsp;
+      </div>
+      <br />
+      <button id="changeButton" onClick={sendWord}>
+        쓰리쓰리 마쓰리 !!
+      </button>
     </div>
   );
 };

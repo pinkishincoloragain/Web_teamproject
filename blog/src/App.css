@@ -443,7 +443,13 @@ p.typing::after {
 }
 
 #changeButton {
-  border-width: 10px;
+  border-width: 0px;
+  font-size: 1vw;
+  background-color: #fff;
+}
+
+#changeButton:hover {
+  color: #0b500e;
 }
 
 @keyframes App-logo-spin {

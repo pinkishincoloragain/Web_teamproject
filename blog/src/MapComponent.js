@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
 import "./App.css";
+import { AwesomeButton } from "react-awesome-button";
+import "react-awesome-button/dist/styles.css";
+
 // import Loading from "./Loading";
 
 const { kakao } = window;
@@ -60,9 +63,9 @@ const MapComponent = (props) => {
       <h2 id="words">
         <br></br>
       </h2>
-      <button id="changeButton" onClick={sendWord}>
-        변환하기 !
-      </button>
+      <AwesomeButton id="changeButton" onClick={sendWord}>
+        ///변환하기 !
+      </AwesomeButton>
     </div>
   );
 };

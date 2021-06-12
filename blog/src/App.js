@@ -8,55 +8,59 @@ import ProgressBar from "react-scroll-progress-bar";
 import Video from "./Video";
 import Section from "./Section";
 import Navbar from "./Navbar";
-import Memo from "./Memo";
 import { searchYouTube } from "./searchYouTube";
+import { searchNews } from "./searchNews";
 import { fakeData } from "./fakeData";
+import Comments from "./Comments";
+import News from "./News";
+
+const query = ["", "", ""];
 
 const youTube = {
-  query: "",
   max: 1,
-  key: "AIzaSyAYtQoo4ySatdc2Ul7tM8h4h4W_VMXhFbM",
+  key: "", //AIzaSyCRb0GozgfE5bwF-NGIc-RL1GIn5yjTD28
 };
-
-var fullWord;
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      videos: fakeData,
-      current: fakeData[0],
+      first: fakeData[0],
+      second: fakeData[0],
+      third: fakeData[0],
+      fullWord: "",
+      articles: [],
     };
     this.handleSearch = this.handleSearch.bind(this);
-    this.handleChange = this.handleChange.bind(this);
   }
+
   // API를 요청하고 그에 따른 응답을 상태에 반영하는 함수
   goToSearch() {
-    searchYouTube(youTube, (result) => {
-      this.setState({ videos: [...result], current: result[0] });
+    searchYouTube(query[0], youTube, (result) => {
+      this.setState({ videos: [...result], first: result[0] });
     });
+    searchYouTube(query[1], youTube, (result) => {
+      this.setState({ videos: [...result], second: result[0] });
+    });
+    searchYouTube(query[2], youTube, (result) => {
+      this.setState({ videos: [...result], third: result[0] });
+    });
+    setTimeout(1000);
   }
   // 검색 버튼을 누르면 최종적으로 실행되는 함수
   // 새로운 검색어(newQuery)를 받아서 youTube 객체에 반영하고 goToSearch 메소드 실행
   handleSearch(newQuery) {
-    fullWord = newQuery;
+    searchNews(newQuery, (result) => {
+      this.setState({ articles: result });
+      console.log(this.state.articles);
+    });
+    this.setState({
+      fullWord: newQuery,
+    });
     newQuery = newQuery.split(".");
-    alert("change: " + newQuery[0]);
-    // alert("change");
-    youTube.query = newQuery[0];
-    this.goToSearch();
-  }
-
-  handleChange(videoKey) {
-    for (let i = 0; i < this.state.videos.length; i++) {
-      if (videoKey === this.state.videos[i].id.videoId) {
-        this.setState({ current: this.state.videos[i] });
-        break;
-      }
+    for (let i = 0; i < 3; i++) {
+      query[i] = newQuery[i];
     }
-  }
-
-  componentDidMount() {
     this.goToSearch();
   }
 
@@ -71,40 +75,57 @@ class App extends React.Component {
 
         <div className="page">
           <Section id="section2" />
-          <Descript name="Let's get it started" color="#F7E600" />
+          <Descript name="Let's get it started" id="des2" color="#F7E600" />
           <div className="Contentdiv">
             {/* <Content color="#F7E600" /> */}
             <MapComponent search={this.handleSearch} />
           </div>
         </div>
         <div className="page">
-          <Section id="section3" />
-          <Descript name="Your Place" color="#543E47" />
-          <div className="Contentdiv">
-            <Content color="#543E47" />
-          </div>
-        </div>
-        <div className="page">
           <Section id="section4" />
-          <Descript name="Your News" color="#2DB400" />
+          <Descript name="Your News" id="des4" color="#2DB400" />
           <div className="Contentdiv">
-            <Content color="#2DB400" />
+            {this.state.fullWord === "" ? (
+              <Content color="#2DB400" />
+            ) : (
+              <News
+                color="#2DB400"
+                address={this.state.fullWord}
+                articles={this.state.articles}
+              />
+            )}
           </div>
         </div>
         <div className="page">
           <Section id="section5" />
-          <Descript name="Your Youtube videos" color="#C4302B" />
+          <Descript name="Your Youtube videos" id="des5" color="#C4302B" />
           <div className="Contentdiv">
-            {/* <Content color="#C4302B" /> */}
-            <Video video={this.state.current} />
+            {this.state.fullWord === "" ? (
+              <Content color="#C4302B" />
+            ) : (
+              <Video
+                first={this.state.first}
+                second={this.state.second}
+                third={this.state.third}
+                address={this.state.fullWord}
+                color="#C4302B"
+              />
+            )}
           </div>
         </div>
         <div className="page">
           <Section id="section6" />
-          <Descript name="Make comment on this place!" color="#E2DFD8" />
+          <Descript
+            name="Make comment on this place!"
+            id="des6"
+            color="#E2DFD8"
+          />
           <div className="Contentdiv">
-            {/* <Content color="#E2DFD8" /> //memo 넣을 자리 */}
-            <Memo color="#E2DFD8" address={fullWord} />
+            <Comments
+              color="#E2DFD8"
+              address={this.state.fullWord}
+              className="Commentsdiv"
+            />
           </div>
         </div>
         <Navbar />

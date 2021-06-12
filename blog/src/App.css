@@ -6,6 +6,10 @@
 body::-webkit-scrollbar {
   display: none;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
   font-family: DoHyeon-Regular;
@@ -22,6 +26,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   font-size: 12vw;
   color: white;
+  text-shadow: 0.2vw 0.2vw #fbff00;
 }
 
 .imgholder {
@@ -108,6 +113,7 @@ body::-webkit-scrollbar {
   border-width: 50vw;
   border-color: midnightblue;
   margin-bottom: 40vh;
+  box-shadow: 0.2vw 0.2vw 10px rgb(43, 16, 124);
 }
 
 /* !!!!!!!!! fullpage css*/
@@ -124,6 +130,24 @@ section {
 .sectionHeader {
   height: 10vh;
 } */
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  90% {
+    transform: rotate(0deg);
+  }
+  93% {
+    transform: rotate(15deg);
+  }
+  96% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 
 nav ul li a span {
   background: #fff;
@@ -175,14 +199,14 @@ nav ul li:hover a.active span {
   border-radius: 100%;
 } */
 
-.pg-horizontal nav {
+/* .pg-horizontal nav {
   width: 100vw;
   left: 0;
   bottom: 20px;
 }
 .pg-horizontal nav ul li {
   float: left;
-}
+} */
 
 /* !!!!!!! */
 
@@ -199,26 +223,86 @@ nav ul li:hover a.active span {
 
 .nav-item {
   /* background-color: "blue"; */
-  width: 4vw;
+  width: 3vw;
   text-align: center;
-  font-size: 100%;
+  font-size: 4vw;
   cursor: pointer;
-  height: 8vh;
+  height: 10vh;
   border-radius: 2vw;
   background-color: #282c34;
   transition: height 0.2s ease;
   font-size: 3vh;
   color: ivory;
   line-height: 8vh;
+  animation: wiggle 7s infinite;
+  box-shadow: 0.2vw 0.2vw 10px black;
 }
 
 .nav-item:hover {
+  transform: rotate(10deg);
+  animation: none;
   transition: height 0.2s ease;
-  height: 12vh;
+  height: 20vh;
+  font-size: 3vh;
   cursor: pointer;
-  border-width: 0.5vh;
-  border-style: solid;
-  border-color: black;
+  /* border-width: 0.5vh; */
+  /* border-style: solid; */
+  /* border-color: black; */
+}
+
+.nav-item-2 {
+  /* background-color: "blue"; */
+  width: 3vw;
+  text-align: center;
+  font-size: 4vw;
+  cursor: pointer;
+  height: 10vh;
+  border-radius: 2vw;
+  background-color: #282c34;
+  transition: height 0.2s ease;
+  font-size: 3vh;
+  color: ivory;
+  line-height: 8vh;
+  animation: wiggle 7s infinite;
+  box-shadow: 0.2vw 0.2vw 10px black;
+}
+
+.nav-item-2:hover {
+  transform: rotate(10deg);
+  animation: none;
+  transition: height 0.2s ease;
+  height: 26vh;
+  font-size: 3vh;
+  cursor: pointer;
+  /* border-width: 0.5vh; */
+  /* border-style: solid; */
+  /* border-color: black; */
+}
+
+#navtext {
+  font-size: 2vw;
+  margin: 0px;
+  padding: 0px;
+}
+
+.v-text {
+  padding: 0px;
+  width: 1vw;
+  margin-left: 2.5vw;
+  padding-top: 3vh;
+  /* padding-top: 1vh; */
+  margin-bottom: 0vw;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-align: left;
+}
+
+.wiggle {
+  display: inline-block;
+}
+
+.wiggle:hover {
+  animation: none;
 }
 
 .nav-items {
@@ -226,6 +310,7 @@ nav ul li:hover a.active span {
 }
 
 .nav .nav-content {
+  text-decoration: double;
   max-width: 900px;
   /* padding: 0rem 3rem; */
   margin: 0 auto;
@@ -234,7 +319,6 @@ nav ul li:hover a.active span {
   align-items: center;
   height: 100%;
   margin-bottom: 10vh;
-  font-size: larger;
 }
 
 @keyframes fadein {
@@ -251,8 +335,8 @@ nav ul li:hover a.active span {
 p.typing {
   /* position: relative; */
   /* display: inline-block; */
-  height: calc(12vw);
-  font-size: calc(10vw);
+  height: 12vw;
+  font-size: 10vw;
   overflow: hidden;
   animation: typingAni 3s steps(100, end);
 }
@@ -296,6 +380,19 @@ p.typing::after {
   animation: fadein 3s;
 }
 
+#des2 {
+  text-shadow: 0.2vw 0.2vw 1px #c8ca49;
+}
+#des4 {
+  text-shadow: 0.2vw 0.2vw 1px #0b500e;
+}
+#des5 {
+  text-shadow: 0.2vw 0.2vw 1px #700202;
+}
+#des6 {
+  text-shadow: 0.2vw 0.2vw 1px #838383;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -319,6 +416,7 @@ p.typing::after {
   margin-bottom: 20vh;
   border-width: 4vh;
   border-radius: 3vh 3vh 3vh 3vh;
+  box-shadow: 0.4vw 0.4vw 3px #4b5466;
 
   align-items: center;
   justify-content: center;
@@ -335,6 +433,7 @@ p.typing::after {
   margin-bottom: 20vh;
   border-width: 4vh;
   border-radius: 0vh 0vh 3vh 3vh;
+  box-shadow: 0.4vw 0.4vw 3px #4b5466;
 
   align-items: center;
   justify-content: center;
@@ -343,7 +442,8 @@ p.typing::after {
   text-align: center;
 }
 
-.changeButton {
+#changeButton {
+  border-width: 10px;
 }
 
 @keyframes App-logo-spin {
@@ -357,4 +457,73 @@ p.typing::after {
 
 html {
   scroll-behavior: smooth;
+}
+
+.one_table {
+  width: 60vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.Commentsdiv {
+  width: 60vw;
+  align-items: center;
+}
+
+.TextBox {
+  min-width: 40vw;
+  margin-left: 0vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+td {
+  padding: 0px;
+  margin: 0px;
+}
+
+.InputBox {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  width: 50vw;
+  padding: 0px;
+}
+
+.refreshButton {
+  position: relative;
+  left: 25vw;
+  top: -2vw;
+}
+
+.scrollComments {
+  background-color: #95999c;
+  width: 60vw;
+  height: 17vw;
+  margin-top: -1vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  overflow: auto;
+}
+
+.commentTable {
+  width: 60vw;
+}
+
+.WordTitle {
+  width: 33vw;
+  display: inline-block;
+  text-align: center;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+  text-decoration: none;
 }

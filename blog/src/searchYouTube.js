@@ -1,6 +1,4 @@
-
-
-export const searchYouTube = ({query, max, key}, callback) => {
+export const searchYouTube = (query, { max, key }, callback) => {
   const httpRequest = new XMLHttpRequest();
 
   var optionParams = {
@@ -22,17 +20,16 @@ export const searchYouTube = ({query, max, key}, callback) => {
   httpRequest.send();
 
   httpRequest.onreadystatechange = function () {
-    if(httpRequest.readyState === httpRequest.DONE) {
-      if(httpRequest.status === 200) {
+    if (httpRequest.readyState === httpRequest.DONE) {
+      if (httpRequest.status === 200) {
         const response = JSON.parse(httpRequest.responseText);
         // var idx = String(Object.keys(response)[5]);
         // var temp = response[idx];
         // VideoId = temp[0].id.videoId;
-        
+
         // return VideoId;
         callback(response.items);
-      }
-      else{
+      } else {
         console.error(httpRequest.responseText);
       }
     }

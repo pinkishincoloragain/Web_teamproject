@@ -28,7 +28,8 @@ class NewsInfo extends React.Component {
               .replace("<b>", "")
               .replace("</b>", "")
               .replace("&quot;", "")
-              .replace("&amp;", "")}
+              .replace("&amp;", "")}{" "}
+            <a href={this.props.articles["link"]}>더보기</a>
           </td>
         </tr>
         <hr />

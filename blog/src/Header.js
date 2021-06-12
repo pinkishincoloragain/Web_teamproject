@@ -13,6 +13,7 @@ class Header extends React.Component {
         <h1 className="Header">
           <p className="typing">지금. 당신이. 서 있는 곳.</p>
         </h1>
+
         <div className="imgholder">
           <img
             className="Logo1"
@@ -81,6 +82,12 @@ class Header extends React.Component {
             }
           />
         </div>
+        <h2>
+          <p>
+            <span className="tooltip">123</span>
+            <span className="tooltip-text">123</span>
+          </p>
+        </h2>
       </div>
     );
   }

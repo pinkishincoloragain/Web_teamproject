@@ -87,7 +87,7 @@ class Comments extends React.Component {
         <form onSubmit={this.handleAdd} id="addForm">
           <table border={5} className="one_table">
             <tr>
-              <td>이름</td>
+              <td id="name_td">이름</td>
               <td>
                 <input
                   type={"text"}
@@ -115,7 +115,7 @@ class Comments extends React.Component {
           </table>
         </form>
         <br />
-        <h3>댓글</h3>
+        <h3 id="comm">댓글</h3>
 
         <div className={"scrollComments"}>
           {mapToComponent(this.state.comments)}

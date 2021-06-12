@@ -15,7 +15,6 @@ import Comments from "./Comments";
 import News from "./News";
 
 const query = ["", "", ""];
-const arr = [];
 
 const youTube = {
   max: 1,

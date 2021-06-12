@@ -15,22 +15,19 @@ const Video = (props) => {
       </div>
       <iframe
         title="video"
-        style={{ width: "26vw", height: "60vh" }}
+        style={{ width: "26vw", height: "50vh" }}
         src={videoURL + props.first.id.videoId}
-        allowFullScreen
-      ></iframe>
+        allowFullScreen></iframe>
       <iframe
         title="video"
         style={{ width: "26vw", height: "60vh" }}
         src={videoURL + props.second.id.videoId}
-        allowFullScreen
-      ></iframe>
+        allowFullScreen></iframe>
       <iframe
         title="video"
         style={{ width: "26vw", height: "60vh" }}
         src={videoURL + props.third.id.videoId}
-        allowFullScreen
-      ></iframe>
+        allowFullScreen></iframe>
     </div>
   );
 };

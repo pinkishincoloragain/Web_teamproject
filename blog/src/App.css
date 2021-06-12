@@ -6,6 +6,10 @@
 body::-webkit-scrollbar {
   display: none;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
   font-family: DoHyeon-Regular;
@@ -109,6 +113,7 @@ body::-webkit-scrollbar {
   border-width: 50vw;
   border-color: midnightblue;
   margin-bottom: 40vh;
+  box-shadow: 0.2vw 0.2vw 10px rgb(43, 16, 124);
 }
 
 /* !!!!!!!!! fullpage css*/
@@ -130,14 +135,14 @@ section {
   0% {
     transform: rotate(0deg);
   }
-  80% {
+  90% {
     transform: rotate(0deg);
   }
-  85% {
-    transform: rotate(20deg);
+  93% {
+    transform: rotate(15deg);
   }
-  95% {
-    transform: rotate(-20deg);
+  96% {
+    transform: rotate(-15deg);
   }
   100% {
     transform: rotate(0deg);
@@ -218,19 +223,78 @@ nav ul li:hover a.active span {
 
 .nav-item {
   /* background-color: "blue"; */
-  width: 4vw;
+  width: 3vw;
   text-align: center;
-  font-size: 100%;
+  font-size: 4vw;
   cursor: pointer;
-  height: 8vh;
+  height: 10vh;
   border-radius: 2vw;
   background-color: #282c34;
   transition: height 0.2s ease;
   font-size: 3vh;
   color: ivory;
   line-height: 8vh;
-  animation: wiggle 5s infinite;
-  box-shadow: 0.2vw 0.2vw 10px gray;
+  animation: wiggle 7s infinite;
+  box-shadow: 0.2vw 0.2vw 10px black;
+}
+
+.nav-item:hover {
+  transform: rotate(10deg);
+  animation: none;
+  transition: height 0.2s ease;
+  height: 20vh;
+  font-size: 3vh;
+  cursor: pointer;
+  /* border-width: 0.5vh; */
+  /* border-style: solid; */
+  /* border-color: black; */
+}
+
+.nav-item-2 {
+  /* background-color: "blue"; */
+  width: 3vw;
+  text-align: center;
+  font-size: 4vw;
+  cursor: pointer;
+  height: 10vh;
+  border-radius: 2vw;
+  background-color: #282c34;
+  transition: height 0.2s ease;
+  font-size: 3vh;
+  color: ivory;
+  line-height: 8vh;
+  animation: wiggle 7s infinite;
+  box-shadow: 0.2vw 0.2vw 10px black;
+}
+
+.nav-item-2:hover {
+  transform: rotate(10deg);
+  animation: none;
+  transition: height 0.2s ease;
+  height: 26vh;
+  font-size: 3vh;
+  cursor: pointer;
+  /* border-width: 0.5vh; */
+  /* border-style: solid; */
+  /* border-color: black; */
+}
+
+#navtext {
+  font-size: 2vw;
+  margin: 0px;
+  padding: 0px;
+}
+
+.v-text {
+  padding: 0px;
+  width: 1vw;
+  margin-left: 2.5vw;
+  padding-top: 3vh;
+  /* padding-top: 1vh; */
+  margin-bottom: 0vw;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-align: left;
 }
 
 .wiggle {
@@ -239,16 +303,6 @@ nav ul li:hover a.active span {
 
 .wiggle:hover {
   animation: none;
-}
-
-.nav-item:hover {
-  animation: none;
-  transition: height 0.2s ease;
-  height: 12vh;
-  cursor: pointer;
-  border-width: 0.5vh;
-  border-style: solid;
-  border-color: black;
 }
 
 .nav-items {
@@ -265,11 +319,6 @@ nav ul li:hover a.active span {
   align-items: center;
   height: 100%;
   margin-bottom: 10vh;
-  font-size: larger;
-}
-
-#home {
-  writing-mode: vertical-rl;
 }
 
 @keyframes fadein {
@@ -286,8 +335,8 @@ nav ul li:hover a.active span {
 p.typing {
   /* position: relative; */
   /* display: inline-block; */
-  height: calc(12vw);
-  font-size: calc(10vw);
+  height: 12vw;
+  font-size: 10vw;
   overflow: hidden;
   animation: typingAni 3s steps(100, end);
 }
@@ -384,12 +433,17 @@ p.typing::after {
   margin-bottom: 20vh;
   border-width: 4vh;
   border-radius: 0vh 0vh 3vh 3vh;
+  box-shadow: 0.4vw 0.4vw 3px #4b5466;
 
   align-items: center;
   justify-content: center;
   border: solid 1vh #282c34;
   /* background-color: midnightblue; */
   text-align: center;
+}
+
+#changeButton {
+  border-width: 10px;
 }
 
 @keyframes App-logo-spin {

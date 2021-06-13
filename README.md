@@ -18,8 +18,12 @@ blog 폴더에서
 ```sh
 npm install
 
-npm start 
+npm run build
 ```
+
+생성된 build 파일을 html으로 이름을 바꿔 주고, 빌드파일 내에 php파일 3개를 삽입 후 서버에 배포.
+
+
 
 ## /// 구현
 
@@ -33,8 +37,7 @@ npm start
 ## /// 업데이트 내역
 
 * 0.1.0
-    * 첫 출시
-    * 수정: `foo()` 메서드 네이밍을 `bar()`로 수정
+    * 첫 출
 
 
 ![image](https://user-images.githubusercontent.com/39547381/121809020-1b4b1c00-cc96-11eb-945d-590434df6dc4.png)

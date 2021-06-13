@@ -8,7 +8,11 @@ class Bar extends React.Component {
   }
   render() {
     return (
-      <div className="Bar" style={{ backgroundColor: this.props.color }}></div>
+      <div>
+        <div
+          className="Bar"
+          style={{ backgroundColor: this.props.color }}></div>
+      </div>
     );
   }
 }

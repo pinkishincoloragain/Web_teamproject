@@ -69,12 +69,15 @@ body {
   animation-fill-mode: forwards;
   visibility: hidden;
   transition: 1s;
+  box-shadow: 1vh 1vh 2vh#282c34;
+  border-left: 3px;
 }
 
 .Logo1:hover {
   transform: rotate(360deg);
   transition: 1s;
   cursor: pointer;
+  box-shadow: 0px 0px 0px;
 }
 
 .Logo1:active {
@@ -94,12 +97,14 @@ body {
   margin-left: 10vw;
   margin-bottom: 0vh;
   transition: 1s;
+  box-shadow: 1vh 1vh #282c34;
 }
 
 .xImg:hover {
   transform: rotate(360deg);
   transition: 1s;
-  cursor: -webkit-grabbing;
+  cursor: help;
+  box-shadow: 0px 0px 0px;
 }
 
 .Logo2 {
@@ -109,12 +114,15 @@ body {
   animation-fill-mode: forwards;
   visibility: hidden;
   transition: 1s;
+  border-radius: 45px;
+  box-shadow: 1vh 1vh 2vh;
 }
 
 .Logo2:hover {
-  transform: rotate(360deg) translateY(-1vw);
+  transform: rotate(360deg);
   transition: 1s;
   cursor: pointer;
+  box-shadow: 0px 0px 2px #282c34;
 }
 
 .Logo2:active {
@@ -136,7 +144,24 @@ body {
   border-radius: 1vh;
   border-color: midnightblue;
   margin-bottom: 40vh;
+  visibility: hidden;
   box-shadow: 0.2vw 0.2vw 10px rgb(43, 16, 124);
+  animation: shorten 5s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shorten {
+  from {
+    width: 100vw;
+    margin-left: 0;
+    visibility: visible;
+  }
+  to {
+    width: 46vw;
+    margin-left: 27vw;
+    visibility: visible;
+  }
 }
 
 /* !!!!!!!!! fullpage css*/
@@ -566,6 +591,14 @@ html {
   border-radius: 10px;
 }
 
+.one_table {
+  width: 60vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  border-width: 10px;
+  margin-top: 1vh;
+}
+
 .Commentsdiv {
   width: 60vw;
   align-items: center;
@@ -577,9 +610,7 @@ html {
   margin-top: 1vh;
   margin-bottom: 1vh;
   border-width: 3px;
-  border-style: solid;
-  border-bottom-width: 6px;
-  border-color: black;
+  border-style: double;
   box-shadow: 1px 1px 1px#282c34;
 }
 
@@ -594,16 +625,6 @@ html {
 #submitBtn {
   margin-bottom: 3vh;
   margin-top: 1vh;
-  border-style: solid;
-  border-color: black;
-  border-width: 3px;
-  border-bottom-width: 6px;
-  border-radius: 3px;
-  box-shadow: 1px 1px 1px rgb(119, 119, 119);
-}
-
-#submitBtn:hover {
-  color: #61dafb;
 }
 
 .td-one {
@@ -651,14 +672,13 @@ html {
   width: 10vw;
   border-style: solid;
   border-color: black;
-  border-width: 3px;
-  border-bottom-width: 6px;
+  border-width: 0.5vh;
   margin-bottom: 1vh;
-  border-radius: 3px;
 }
 
-.refreshButton:hover {
-  color: #61dafb;
+.refreshButton:active {
+  color: red;
+  border-width: 1vh;
 }
 
 .scrollComments {
@@ -674,23 +694,6 @@ html {
 .commentTable {
   width: 60vw;
   border-radius: 2px;
-}
-
-.comm_name {
-  padding-right: 3vw;
-  padding-left: 3vw;
-  width: 15vw;
-}
-.comm_in {
-  padding-right: 3vw;
-  padding-left: 3vw;
-  width: 15vw;
-}
-
-.comm_date {
-  padding-right: 3vw;
-  padding-left: 3vw;
-  width: 15vw;
 }
 
 .WordTitle {

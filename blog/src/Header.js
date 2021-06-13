@@ -50,42 +50,44 @@ class Header extends React.Component {
               })
             }
           />
-          <img
-            className="xImg"
-            src={x}
-            alt="x"
-            border="0"
-            onClick={() =>
-              Swal.fire({
-                title: "<strong>사용 방법!</strong>",
-                html: `<b>제가 직접 알려 드리겠습니다</b><br/><br/><br/>
+          <div style={{ display: "inline" }}>
+            <img
+              className="xImg"
+              src={x}
+              alt="x"
+              border="0"
+              onClick={() =>
+                Swal.fire({
+                  title: "<strong>사용 방법!</strong>",
+                  html: `<b>제가 직접 알려 드리겠습니다</b><br/><br/><br/>
                 1. 지도에서 자신의 위치를 고른다!<br/><br/>
                 2. 우리가 API를 써서 위치를 단어로 바꿔 드려요<br/><br/>
                 3. 추천 유튜브 영상과 네이버 기사를 보고,<br/><br/>
                 4. 이 위치에 대한 리뷰를 댓글로 남겨주세요!<br/><br/>
                 5. 친구들에게 이 사이트를 알려 주세요!`,
-                showCloseButton: true,
-                showCancelButton: false,
-                focusConfirm: false,
-                reverseButtons: true,
-                focusCancel: true,
-                cancelButtonText: `압니다.`,
-                confirmButtonText: `알겠습니다.`,
-                background: "white",
-                color: "midnightblue",
-                backdrop: `
+                  showCloseButton: true,
+                  showCancelButton: false,
+                  focusConfirm: false,
+                  reverseButtons: true,
+                  focusCancel: true,
+                  cancelButtonText: `압니다.`,
+                  confirmButtonText: `알겠습니다.`,
+                  background: "white",
+                  color: "midnightblue",
+                  backdrop: `
     rgba(0,0,123,0.4)
     url("https://sweetalert2.github.io/images/nyan-cat.gif")
     center bottom
     repeat
   `,
-              }).then((result) => {
-                if (result.value) {
-                  // window.location.href = `../public/kakaomap.html`;
-                }
-              })
-            }
-          />
+                }).then((result) => {
+                  if (result.value) {
+                    // window.location.href = `../public/kakaomap.html`;
+                  }
+                })
+              }
+            />
+          </div>
           <img
             className="Logo2"
             src={kakao}

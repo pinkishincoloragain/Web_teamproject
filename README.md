@@ -1,4 +1,4 @@
-# /// 쓰리 쓰리 마쓰리 ! (3!&nbsp;3!&nbsp;M3!)
+# /// 쓰리! 쓰리! 마쓰리 ! (3!&nbsp;3!&nbsp;M3!)
 > 현재! 당신의! 위치로! 다양한 컨텐츠를 즐길 수 있는 웹사이트!
 
 ![Logo](https://user-images.githubusercontent.com/39547381/121808576-0f5e5a80-cc94-11eb-85a4-bd85a9bcc44f.png)
@@ -29,15 +29,15 @@ npm run build
 
 ![image](https://user-images.githubusercontent.com/39547381/121809004-040c2e80-cc96-11eb-8381-3ca11261fdaf.png)
 
-다양한 이스터에그 / 효과가 있으니 체험해보세요
+다양한 이스터에그 / 효과가 있으니 찾아 보세요!
 
-버튼의 변화, 빙글빙글 돌아가는 버튼, 흔들리는 네비게이션 바.. 고양이 등등
+버튼의 변화, 빙글빙글 돌아가는 버튼, 흔들리는 네비게이션 바.. 달리는 고양이gif 등등
 
 
 ## /// 업데이트 내역
 
 * 0.1.0
-    * 첫 출
+    * 첫 번째 버전
 
 
 ![image](https://user-images.githubusercontent.com/39547381/121809020-1b4b1c00-cc96-11eb-945d-590434df6dc4.png)

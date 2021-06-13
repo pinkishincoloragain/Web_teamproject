@@ -83,74 +83,73 @@ class Comments extends React.Component {
     return (
       <div className="ContentBox" style={{ backgroundColor: this.props.color }}>
         <form onSubmit={this.handleAdd} id="addForm">
-          <table border={5} className="one_table">
-            <tr>
-              <td id="name_td">이름</td>
-              <td className="td-one">
-                <input
-                  type={"text"}
-                  name={"wname"}
-                  value={this.state.wname}
-                  onChange={this.handleChange}
-                  className={"TextBox"}
-                />
-              </td>
-              <td className="td-one" rowSpan={3}>
-                {/* <input type={"submit"} value={"+"} /> */}
-                <button
-                  id="submitBtn"
-                  type={"submit"}
-                  onClick={() =>
-                    Swal.fire({
-                      title: "<strong>댓글을 작성했어요!</strong>",
-                      html: `다른 사람들이 쓴 댓글들도 확인해 보세요!`,
-                      showCloseButton: true,
-                      showCancelButton: false,
-                      focusConfirm: false,
-                      reverseButtons: true,
-                      focusCancel: true,
-                      background: "white",
-                      color: "midnightblue",
-                      backdrop: `
+          <div className="inputForm">
+            <div style={{ marginLeft: "10vw", display: "flex" }}>
+              <div
+                style={{
+                  textAlign: "center",
+                  marginTop: "1.5vh",
+                  marginRight: "2vw",
+                }}>
+                이름
+              </div>
+              <input
+                type={"text"}
+                name={"wname"}
+                value={this.state.wname}
+                onChange={this.handleChange}
+                className={"TextBox"}
+              />
+            </div>
+            <textarea
+              placeholder={"적어보세요."}
+              name={"content"}
+              value={this.state.content}
+              onChange={this.handleChange}
+              className={"InputBox"}
+            />
+            {/* <input type={"submit"} value={"+"} /> */}
+            <button
+              id="submitBtn"
+              type={"submit"}
+              onClick={() =>
+                Swal.fire({
+                  title: "<strong>댓글을 작성했어요!</strong>",
+                  html: `다른 사람들이 쓴 댓글들도 확인해 보세요!`,
+                  showCloseButton: true,
+                  showCancelButton: false,
+                  focusConfirm: false,
+                  reverseButtons: true,
+                  focusCancel: true,
+                  background: "white",
+                  color: "midnightblue",
+                  backdrop: `
     rgba(0,0,123,0.4)
   `,
-                    }).then((result) => {
-                      if (result.value) {
-                        // window.location.href = `../public/kakaomap.html`;
-                      }
-                    })
+                }).then((result) => {
+                  if (result.value) {
+                    // window.location.href = `../public/kakaomap.html`;
                   }
-                >
-                  제출하기!
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td className="putBox" colSpan={4}>
-                <textarea
-                  placeholder={"적어보세요."}
-                  name={"content"}
-                  value={this.state.content}
-                  onChange={this.handleChange}
-                  className={"InputBox"}
-                />
-              </td>
-            </tr>
-          </table>
+                })
+              }>
+              제출하기!
+            </button>
+          </div>
         </form>
         <br />
-        <h3 id="comm">댓글</h3>
+        <div className="showTable">
+          <h3 id="comm">댓글</h3>
 
-        <div className={"scrollComments"}>
-          {mapToComponent(this.state.comments)}
+          <div className={"scrollComments"}>
+            {mapToComponent(this.state.comments)}
+          </div>
+          <button
+            className="refreshButton"
+            onClick={this.handleShow}
+            onChange={this.handleChange}>
+            새로고침
+          </button>
         </div>
-        <button
-          className="refreshButton"
-          onClick={this.handleShow}
-          onChange={this.handleChange}
-        >
-          새로고침
-        </button>
       </div>
     );
   }

@@ -577,21 +577,26 @@ html {
 }
 
 .TextBox {
-  min-width: 40vw;
+  min-width: 10vw;
   margin-left: 0vw;
   margin-top: 1vh;
   margin-bottom: 1vh;
   border-width: 3px;
-  border-style: groove;
+  border-style: double;
+  box-shadow: 1px 1px 1px#282c34;
 }
 
 #name_td {
   font-size: 6px+1vh;
+  width: 100px;
   max-width: 5vw;
+  writing-mode: vertical-rl;
+  padding: 2vw;
 }
 
 #submitBtn {
-  margin: 10vh;
+  margin-bottom: 3vh;
+  margin-top: 1vh;
 }
 
 .td-one {
@@ -607,17 +612,45 @@ html {
 
 .InputBox {
   margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0vw;
-  width: 70%;
   padding: 0px;
+  margin-bottom: 0;
+  margin-left: 10vw;
+  width: 80%;
   float: left;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.3vh;
+  border-bottom-width: 1vh;
+  border-radius: 3px;
 }
 
+.inputForm {
+  margin-top: 1vh;
+  border-width: 1vh;
+  border-style: double;
+  border-radius: 10px;
+  border-color: black;
+}
+
+.showTable {
+  margin-top: 3vh;
+  border-width: 1vh;
+  border-style: double;
+  border-radius: 10px;
+  border-color: black;
+}
 .refreshButton {
   margin-top: 2vh;
   width: 10vw;
-  border-style: groove;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.5vh;
+  margin-bottom: 1vh;
+}
+
+.refreshButton:active {
+  color: red;
+  border-width: 1vh;
 }
 
 .scrollComments {
@@ -732,6 +765,7 @@ a:hover {
 }
 
 #comm {
+  font-size: 200%;
   text-decoration: underline;
 }
 

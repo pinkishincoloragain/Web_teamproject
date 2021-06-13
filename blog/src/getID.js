@@ -9,7 +9,7 @@ function getID(word) {
   var optionParams = {
     q: word,
     part: "snippet",
-    key: "AIzaSyCUIDAQFFfLpwYwJmogvgadNFq7kV4yhvg", // API key value
+    key: "AIzaSyCRb0GozgfE5bwF-NGIc-RL1GIn5yjTD28", // API key value
     maxResults: 1,
   };
   // 한글은 uri encoding 해야함.

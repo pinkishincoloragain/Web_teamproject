@@ -8,9 +8,11 @@ class CommentsInfo extends React.Component {
     return (
       <table border={0} className={"commentTable"}>
         <tr>
-          <td>Name : {this.props.comments["wname"]}</td>
-          <td>Content : {this.props.comments["content"]}</td>
-          <td>Date : {this.props.comments["wdate"]}</td>
+          <td className="comm_name">이름 : {this.props.comments["wname"]}</td>
+          <td className="comm_in">댓글 : {this.props.comments["content"]}</td>
+          <td className="comm_date">
+            작성한 날 : {this.props.comments["wdate"]}
+          </td>
         </tr>
         <hr />
       </table>
@@ -88,9 +90,11 @@ class Comments extends React.Component {
               <div
                 style={{
                   textAlign: "center",
-                  marginTop: "1.5vh",
-                  marginRight: "2vw",
-                }}>
+                  marginRight: "1.5vw",
+                  marginTop: "0.5vh",
+                  fontSize: "180%",
+                }}
+              >
                 이름
               </div>
               <input
@@ -131,14 +135,15 @@ class Comments extends React.Component {
                     // window.location.href = `../public/kakaomap.html`;
                   }
                 })
-              }>
+              }
+            >
               제출하기!
             </button>
           </div>
         </form>
         <br />
         <div className="showTable">
-          <h3 id="comm">댓글</h3>
+          <h3 id="comm">/// &nbsp;이 위치에서 사람들이 단 댓글</h3>
 
           <div className={"scrollComments"}>
             {mapToComponent(this.state.comments)}
@@ -146,7 +151,8 @@ class Comments extends React.Component {
           <button
             className="refreshButton"
             onClick={this.handleShow}
-            onChange={this.handleChange}>
+            onChange={this.handleChange}
+          >
             새로고침
           </button>
         </div>

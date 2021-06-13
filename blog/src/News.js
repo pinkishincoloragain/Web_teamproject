@@ -12,14 +12,14 @@ class NewsInfo extends React.Component {
     return (
       <table border={0}>
         <tr>
-          <a href={this.props.articles["link"]} target="_blank">
-            <h2>#{this.props.articles["word"]}</h2>
-          </a>
+          {/* <a href={this.props.articles["link"]} target="_blank"> */}
+          <h2>#{this.props.articles["word"]}</h2>
+          {/* </a> */}
         </tr>
         <tr>
-          <a href={this.props.articles["link"]} target="_blank">
-            <td>title: {this.props.articles["title"]}</td>
-          </a>
+          {/* <a href={this.props.articles["link"]} target="_blank"> */}
+          <td>title: {this.props.articles["title"]}</td>
+          {/* </a> */}
         </tr>
         <tr>
           <td>

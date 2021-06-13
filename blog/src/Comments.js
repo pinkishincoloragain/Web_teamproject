@@ -83,12 +83,13 @@ class Comments extends React.Component {
     return (
       <div
         className={"ContentBox"}
-        style={{ backgroundColor: this.props.color }}>
+        style={{ backgroundColor: this.props.color }}
+      >
         <form onSubmit={this.handleAdd} id="addForm">
           <table border={5} className="one_table">
             <tr>
               <td id="name_td">이름</td>
-              <td>
+              <td className="td-one">
                 <input
                   type={"text"}
                   name={"wname"}
@@ -97,12 +98,12 @@ class Comments extends React.Component {
                   className={"TextBox"}
                 />
               </td>
-              <td rowSpan={3}>
+              <td className="td-one" rowSpan={3}>
                 <input type={"submit"} value={"+"} />
               </td>
             </tr>
             <tr>
-              <td colSpan={4}>
+              <td className="td-one" colSpan={4}>
                 <textarea
                   placeholder={"적어보세요."}
                   name={"content"}
@@ -123,7 +124,8 @@ class Comments extends React.Component {
         <button
           className={"refreshButton"}
           onClick={this.handleShow}
-          onChange={this.handleChange}>
+          onChange={this.handleChange}
+        >
           새로고침
         </button>
       </div>

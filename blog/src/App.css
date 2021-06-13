@@ -293,7 +293,7 @@ nav-item:last-of-type {
 .v-text {
   padding: 0px;
   width: 1vw;
-  margin-left: 2.4vw;
+  margin-left: calc(2vw + 10px);
   padding-top: 3vh;
   /* padding-top: 1vh; */
   margin-bottom: 0vw;
@@ -545,7 +545,7 @@ html {
   font-size: 7px+1vh;
 }
 
-td {
+.td-one {
   padding: 0px;
   margin: 0px;
   width: 0.1px;
@@ -634,6 +634,7 @@ a:hover {
 }
 
 .Footer {
+  margin-top: 1px;
   font-size: 4vh;
   width: 96vw;
   margin-left: 2vw;

@@ -100,13 +100,14 @@ class Comments extends React.Component {
               <input
                 type={"text"}
                 name={"wname"}
+                placeholder={"/// 적어보세요."}
                 value={this.state.wname}
                 onChange={this.handleChange}
                 className={"TextBox"}
               />
             </div>
             <textarea
-              placeholder={"적어보세요."}
+              placeholder={"/// 적어보세요."}
               name={"content"}
               value={this.state.content}
               onChange={this.handleChange}

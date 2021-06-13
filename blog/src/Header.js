@@ -23,8 +23,8 @@ class Header extends React.Component {
             onClick={() =>
               Swal.fire({
                 title: "<strong>W3W API를 아십니까..?</strong>",
-                html: `모르시면 제가 직접 알려 드리겠습니다..\n
-                what3words (W3W)는 전 세계 지도 상의 좌표평면(3m x 3m)을 \n
+                html: `제가 직접 알려 드리겠습니다..<br/>
+                what3words (W3W)는 전 세계 지도 상의 좌표평면<br/>(3m x 3m)을 
                 3개의 단어로 표현한 좌표체계입니다!
                 `,
                 icon: "success",
@@ -57,9 +57,13 @@ class Header extends React.Component {
             border="0"
             onClick={() =>
               Swal.fire({
-                title: "<strong>카카오맵 API를 아십니까..?</strong>",
-                html: `모르시면 제가 직접 알려 드리겠습니다\n
-                사용자의 위치를 지도에서 고르면, 좌표로 다시 돌려 줍니다!`,
+                title: "<strong>사용 방법!</strong>",
+                html: `<b>제가 직접 알려 드리겠습니다</b><br/><br/><br/>
+                1. 지도에서 자신의 위치를 고른다!<br/><br/>
+                2. 우리가 API를 써서 위치를 단어로 바꿔 드려요<br/><br/>
+                3. 추천 유튜브 영상과 네이버 기사를 보고,<br/><br/>
+                4. 이 위치에 대한 리뷰를 댓글로 남겨주세요!<br/><br/>
+                5. 친구들에게 이 사이트를 알려 주세요!`,
                 showCloseButton: true,
                 showCancelButton: false,
                 focusConfirm: false,
@@ -90,13 +94,14 @@ class Header extends React.Component {
             onClick={() =>
               Swal.fire({
                 title: "<strong>카카오맵 API를 아십니까..?</strong>",
-                html: `모르시면 제가 직접 알려 드리겠습니다\n
-                사용자의 위치를 지도에서 고르면, 좌표로 다시 돌려 줍니다!`,
+                html: `제가 직접 알려 드리겠습니다<br/>
+                사용자의 위치를 지도에서 고르면,<br/> 카카오맵 API가 용자의 위치를 좌표로 돌려 줍니다!`,
                 showCloseButton: true,
                 showCancelButton: false,
                 focusConfirm: false,
                 reverseButtons: true,
                 focusCancel: true,
+                icon: "success",
                 cancelButtonText: `압니다.`,
                 confirmButtonText: `알겠습니다.`,
                 background: "white",

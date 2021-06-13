@@ -80,6 +80,7 @@ body {
 .Logo1:active {
   transition: all ease-in-out 10s 0s;
   transform: rotate(72000deg);
+  cursor: -webkit-grabbing;
 }
 
 .xImg {
@@ -98,6 +99,7 @@ body {
 .xImg:hover {
   transform: rotate(360deg);
   transition: 1s;
+  cursor: -webkit-grabbing;
 }
 
 .Logo2 {
@@ -119,6 +121,7 @@ body {
   transition: all ease-in 10s 0s;
   transform: rotate(72000deg);
   visibility: hidden;
+  cursor: -webkit-grabbing;
 }
 
 .Bar {

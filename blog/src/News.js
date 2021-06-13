@@ -7,29 +7,32 @@ class NewsInfo extends React.Component {
     const description = this.props.articles["description"]
       .replace("<b>", "")
       .replace("</b>", "")
-      .replace("'&quot;'", "")
+      .replace("&quot;", "")
       .replace("&amp;", "");
     return (
-      <table border={0}>
-        <tr>
+      <table className="article_table" border={0}>
+        <tr className="article_word">
           {/* <a href={this.props.articles["link"]} target="_blank"> */}
           <h2>#{this.props.articles["word"]}</h2>
           {/* </a> */}
         </tr>
         <tr>
           {/* <a href={this.props.articles["link"]} target="_blank"> */}
-          <td>title: {this.props.articles["title"]}</td>
+          <td>
+            <div id="article_title">{this.props.articles["title"]}</div>
+          </td>
           {/* </a> */}
         </tr>
         <tr>
           <td>
-            description:{" "}
             {description
               .replace("<b>", "")
               .replace("</b>", "")
               .replace("&quot;", "")
-              .replace("&amp;", "")}{" "}
-            <a href={this.props.articles["link"]}>더보기</a>
+              .replace("&amp;", "")}
+            <a id="more" href={this.props.articles["link"]} target="_blank">
+              더보기
+            </a>
           </td>
         </tr>
         <hr />
@@ -76,7 +79,10 @@ class News extends React.Component {
       });
     };
     return (
-      <div className={"ContentBox"} style={{ borderColor: this.props.color }}>
+      <div
+        className={"ContentBox-article"}
+        style={{ borderColor: this.props.color }}
+      >
         {mapToComponent(this.props.articles)}
       </div>
     );

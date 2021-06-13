@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 class CommentsInfo extends React.Component {
   render() {
@@ -48,7 +49,6 @@ class Comments extends React.Component {
     const api = axios.create({ baseURL: "http://goweb.dothome.co.kr/" });
     api.post("addComment.php?w3=" + this.props.address, comment);
     console.log("add()");
-    alert("추가되었습니다");
     this.setState({
       wname: "",
       wpass: "",
@@ -81,10 +81,7 @@ class Comments extends React.Component {
     };
 
     return (
-      <div
-        className={"ContentBox"}
-        style={{ backgroundColor: this.props.color }}
-      >
+      <div className="ContentBox" style={{ backgroundColor: this.props.color }}>
         <form onSubmit={this.handleAdd} id="addForm">
           <table border={5} className="one_table">
             <tr>
@@ -99,11 +96,37 @@ class Comments extends React.Component {
                 />
               </td>
               <td className="td-one" rowSpan={3}>
-                <input type={"submit"} value={"+"} />
+                {/* <input type={"submit"} value={"+"} /> */}
+                <button
+                  id="submitBtn"
+                  type={"submit"}
+                  onClick={() =>
+                    Swal.fire({
+                      title: "<strong>댓글을 작성했어요!</strong>",
+                      html: `다른 사람들이 쓴 댓글들도 확인해 보세요!`,
+                      showCloseButton: true,
+                      showCancelButton: false,
+                      focusConfirm: false,
+                      reverseButtons: true,
+                      focusCancel: true,
+                      background: "white",
+                      color: "midnightblue",
+                      backdrop: `
+    rgba(0,0,123,0.4)
+  `,
+                    }).then((result) => {
+                      if (result.value) {
+                        // window.location.href = `../public/kakaomap.html`;
+                      }
+                    })
+                  }
+                >
+                  제출하기!
+                </button>
               </td>
             </tr>
             <tr>
-              <td className="td-one" colSpan={4}>
+              <td className="putBox" colSpan={4}>
                 <textarea
                   placeholder={"적어보세요."}
                   name={"content"}
@@ -122,7 +145,7 @@ class Comments extends React.Component {
           {mapToComponent(this.state.comments)}
         </div>
         <button
-          className={"refreshButton"}
+          className="refreshButton"
           onClick={this.handleShow}
           onChange={this.handleChange}
         >

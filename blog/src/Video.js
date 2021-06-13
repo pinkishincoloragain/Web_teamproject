@@ -9,36 +9,47 @@ const Video = (props) => {
   return (
     <div id="videobox" className="ContentBox">
       {/* <div style={{ width: "50vw", height: "10vh" }}> */}
-      <div style={{ width: "80vw" }}>
-        <h2 className="WordTitle" id="title0">
-          #{word[0]}
-        </h2>
-        <h2 className="WordTitle" id="title1">
-          #{word[1]}
-        </h2>
-        <h2 className="WordTitle" id="title2">
-          #{word[2]}
-        </h2>
+      <div>
+        <div>
+          <h2 className="WordTitle" id="title0">
+            #{word[0]}
+          </h2>
+          <iframe
+            className="vidFrame-1"
+            title="video"
+            style={{ width: "60vw", height: "50vh" }}
+            src={videoURL + props.first.id.videoId}
+            allowFullScreen
+          ></iframe>
+        </div>
+
+        <div>
+          <h2 className="WordTitle" id="title1">
+            #{word[1]}
+          </h2>
+          <iframe
+            className="vidFrame-2"
+            title="video"
+            id="middleIframe"
+            style={{ width: "60vw", height: "50vh" }}
+            src={videoURL + props.second.id.videoId}
+            allowFullScreen
+          ></iframe>
+        </div>
+
+        <div>
+          <h2 className="WordTitle" id="title2">
+            #{word[2]}
+          </h2>
+          <iframe
+            className="vidFrame-3"
+            title="video"
+            style={{ width: "60vw", height: "50vh" }}
+            src={videoURL + props.third.id.videoId}
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
-      <iframe
-        className="vidFrame"
-        title="video"
-        style={{ width: "25vw", height: "60vh" }}
-        src={videoURL + props.first.id.videoId}
-        allowFullScreen></iframe>
-      <iframe
-        className="vidFrame"
-        title="video"
-        id="middleIframe"
-        style={{ width: "25vw", height: "60vh" }}
-        src={videoURL + props.second.id.videoId}
-        allowFullScreen></iframe>
-      <iframe
-        className="vidFrame"
-        title="video"
-        style={{ width: "25vw", height: "60vh" }}
-        src={videoURL + props.third.id.videoId}
-        allowFullScreen></iframe>
     </div>
   );
 };

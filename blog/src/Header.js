@@ -82,12 +82,6 @@ class Header extends React.Component {
             }
           />
         </div>
-        <h2>
-          <p>
-            <span className="tooltip">123</span>
-            <span className="tooltip-text">123</span>
-          </p>
-        </h2>
       </div>
     );
   }

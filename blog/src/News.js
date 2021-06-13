@@ -76,10 +76,7 @@ class News extends React.Component {
       });
     };
     return (
-      <div
-        className={"ContentBox"}
-        style={{ backgroundColor: this.props.color }}
-      >
+      <div className={"ContentBox"} style={{ borderColor: this.props.color }}>
         {mapToComponent(this.props.articles)}
       </div>
     );

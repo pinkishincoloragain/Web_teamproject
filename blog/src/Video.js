@@ -7,7 +7,7 @@ let word;
 const Video = (props) => {
   word = props.address.split(".");
   return (
-    <div className="ContentBox">
+    <div id="videobox" className="ContentBox">
       {/* <div style={{ width: "50vw", height: "10vh" }}> */}
       <div style={{ width: "80vw" }}>
         <h2 className="WordTitle" id="title0">

@@ -436,6 +436,10 @@ p.typing::after {
   text-align: center;
 }
 
+#videobox {
+  border-color: #c4302b;
+}
+
 .ContentBox-Map {
   width: 80vw;
   height: 70vh;

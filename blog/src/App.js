@@ -19,7 +19,7 @@ const query = ["", "", ""];
 
 const youTube = {
   max: 1,
-  key: "", //AIzaSyCRb0GozgfE5bwF-NGIc-RL1GIn5yjTD28
+  key: "AIzaSyCUIDAQFFfLpwYwJmogvgadNFq7kV4yhvg", //AIzaSyCRb0GozgfE5bwF-NGIc-RL1GIn5yjTD28
 };
 
 class App extends React.Component {

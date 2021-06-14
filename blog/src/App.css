@@ -143,12 +143,21 @@ body {
   border-width: 50vw;
   border-radius: 1vh;
   border-color: midnightblue;
-  margin-bottom: 40vh;
   visibility: hidden;
   box-shadow: 0.2vw 0.2vw 10px rgb(43, 16, 124);
   animation: shorten 3s;
   animation-delay: 3s;
   animation-fill-mode: forwards;
+}
+
+.helper {
+  color: black;
+}
+
+.helper:hover {
+  font-size: 300%;
+  color: rgb(43, 16, 124);
+  text-shadow: 2px 2px 2px yellow;
 }
 
 @keyframes shorten {

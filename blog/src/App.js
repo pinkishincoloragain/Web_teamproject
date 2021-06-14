@@ -19,7 +19,7 @@ const query = ["", "", ""];
 
 const youTube = {
   max: 1,
-  key: "AIzaSyCUIDAQFFfLpwYwJmogvgadNFq7kV4yhvg", //AIzaSyCRb0GozgfE5bwF-NGIc-RL1GIn5yjTD28
+  key: "AIzaSyCRb0GozgfE5bwF-NGIc-RL1GIn5yjTD28", //AIzaSyCRb0GozgfE5bwF-NGIc-RL1GIn5yjTD28
 };
 
 class App extends React.Component {
@@ -74,6 +74,14 @@ class App extends React.Component {
         <Header />
         <ProgressBar height="2vh" bgcolor="#F43059" duration="1" />
         <Bar />
+        <div className="helper" style={{ fontSize: "180%", marginTop: "3vh" }}>
+          X 버튼을 누르세요.
+          <br />
+        </div>
+        <div style={{ fontSize: "100%", marginBottom: "40vh" }}>
+          옆 아이콘도 꾹 눌러 보세요 ..
+        </div>
+
         <div className="page">
           <Section id="section2" />
           <Descript name="시작해봅시다." id="des2" color="#F7E600" />
